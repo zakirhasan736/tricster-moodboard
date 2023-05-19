@@ -1230,13 +1230,21 @@ header .nom.visible {
   margin-bottom: 50vh;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
 }
 .truth2 .mot {
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+  -webkit-transform: translateX(-1%) translateY(2%);
+  transform: translateX(-1%) translateY(2%);
   font-size: 0;
+  margin-right: 64px;
+  margin-bottom: 64px;
+}
+.pin-intraction-box .truth2 .mot {
+	position: relative;
+}
+.pin-intraction-box .truth2 .mot img {
+  width: 100%;
 }
 .truth2 .repere {
   top: 50%;

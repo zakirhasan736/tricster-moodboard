@@ -3569,10 +3569,9 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       ease: "none"
     })
 
-    ),
-
-
-    
+    );
+    // gsap.registerPlugin(ScrollTrigger);
+    if(window.innerWidth >= 1281){
     _n.to(".truth2 .mot", {
       scrollTrigger: {
         trigger: ".truth2 .repere",
@@ -3581,11 +3580,63 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         pin: ".pin-intraction-box",
         scrub: !0,
       },
-      scaleY: 2.2,
-      scale: 2.4,
-      x: "0%",
+      scale: 8.55,
+      x: "-380%",
+      marginRight: '0',
+      y: "200%",
       ease: "none"
-    }), document.querySelectorAll(".truth2 span").forEach((function (t) {
+    })
+  }
+  else if (window.innerWidth >= 992 ){
+    _n.to(".truth2 .mot", {
+      scrollTrigger: {
+        trigger: ".truth2 .repere",
+        start: "top 80%",
+        end: "+=" + 2 * Bo + "px",
+        pin: ".pin-intraction-box",
+        scrub: !0,
+      },
+      scale: 5.55,
+      x: "-220%",
+      marginRight: '0',
+      y: "70%",
+      ease: "none"
+    })
+  }
+  else if (window.innerWidth >= 768 ){
+    _n.to(".truth2 .mot", {
+      scrollTrigger: {
+        trigger: ".truth2 .repere",
+        start: "top 80%",
+        end: "+=" + 2 * Bo + "px",
+        pin: ".pin-intraction-box",
+        scrub: !0,
+      },
+      scale: 3.8,
+      x: "-120%",
+      marginRight: '0',
+      y: "0%",
+      ease: "none"
+    })
+  }
+  else{
+    _n.to(".truth2 .mot", {
+      scrollTrigger: {
+        trigger: ".truth2 .repere",
+        start: "top 80%",
+        end: "+=" + 2 * Bo + "px",
+        pin: ".pin-intraction-box",
+        scrub: !0,
+      },
+      scale: 3.8,
+      x: "-0%",
+      marginRight: '0',
+      y: "0%",
+      ease: "none"
+    })
+  }
+  ;
+   document.querySelectorAll(".truth2 span").forEach((function (t) {
       _n.to(t, {
         scrollTrigger: {
           trigger: ".bottom-block-text-wrapper",
