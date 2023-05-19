@@ -3039,13 +3039,47 @@
       opacity: 0,
       ease: "none",
       immediateRender: !1
-    }), Oo.create({
+    });
+    if(window.innerWidth >= 1400){
+    Oo.create({
       trigger: ".SConcert",
       start: "top 70%",
       end: "bottom top",
       pin: ".debut"
-    }), 
-   
+    });
+  }
+  else if (window.innerWidth >= 1200){
+    Oo.create({
+      trigger: ".SConcert",
+      start: "top 80%",
+      end: "bottom top",
+      pin: ".debut"
+    });
+  }
+  else if (window.innerWidth >= 992){
+    Oo.create({
+      trigger: ".SConcert",
+      start: "top 90%",
+      end: "bottom top",
+      pin: ".debut"
+    });
+  }
+  else if (window.innerWidth >= 768){
+    Oo.create({
+      trigger: ".SConcert",
+      start: "top 95%",
+      end: "bottom top",
+      pin: ".debut"
+    });
+  }
+  else{
+    Oo.create({
+      trigger: ".SConcert",
+      start: "top 100%",
+      end: "bottom top",
+      pin: ".debut"
+    });
+  }
     document.querySelectorAll(".citaD").forEach((function (t) {
       Oo.create({
         trigger: t,
