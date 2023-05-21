@@ -3435,36 +3435,8 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scrub: !0
       },
       scale: .2
-    }), Oo.create({
-      trigger: ".SProfessor",
-      start: "top top",
-      end: "+=" + 2 * Bo + "px",
-      pin: !0,
-      onLeave: function () {
-        document.querySelector(".SProfessor h2").classList.add("actif")
-      },
-      onEnterBack: function () {
-        document.querySelector(".SProfessor h2").classList.remove("actif")
-      }
-    }), _n.to(".portrait", {
-      scrollTrigger: {
-        trigger: ".SProfessor",
-        start: "top bottom",
-        end: "+=" + 3 * Bo + "px",
-        scrub: !0
-      },
-      scale: .265,
-      ease: "none"
-    }), _n.to(".portrait img", {
-      scrollTrigger: {
-        trigger: ".SProfessor",
-        start: "top bottom",
-        end: "+=" + 3 * Bo + "px",
-        scrub: !0
-      },
-      scale: 1,
-      ease: "none"
-    }), _n.to(".animO", {
+    }), 
+    _n.to(".animO", {
       scrollTrigger: {
         trigger: ".SProfessor",
         start: "top bottom",
@@ -3773,7 +3745,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         ease: "power4.inOut",
         delay: 1,
         onComplete: function () {
-          Do = !1, document.querySelector(".notesB").style.display = "none", document.getElementById("volet").style.display = "none"
+          Do = !1,  document.getElementById("volet").style.display = "none"
         }
       })), _n.delayedCall(1, (function () {
         document.getElementById("menu").style.display = "none", ".SDeb" != t && document.querySelector(".nom").classList.add("visible");
