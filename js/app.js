@@ -2544,7 +2544,9 @@
       key: "init",
       value: function () {
         var t = this;
-    _n.ticker.add(this.addTicker)
+        this.height = document.querySelector(this.elmt).clientHeight - window.innerHeight, this.deplacement = _n.quickSetter(this.elmt, "y", "px"), this.addTicker = function () {
+          t.playTicker()
+        }, _n.ticker.add(this.addTicker)
       }
     }, {
       key: "wheel",
