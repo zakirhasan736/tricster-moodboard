@@ -2578,7 +2578,7 @@
   }();
 
   function qo() {
-    return (("ontouchstart" in window))
+    return (("ontouchstart" in window) && navigator.msMinTouchPoints && navigator.OMinTouchPoints && navigator.MozMinTouchPoints && navigator.MsMinTouchPoints && navigator.WebkitMinTouchPoints)
   }
   var Co, Lo = (function (t) {
       function e(t) {
@@ -3321,52 +3321,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       opacity: 1,
       y: "0%",
       ease: "none"
-    }), _n.to(".innerFix .center", {
-      scrollTrigger: {
-        trigger: ".STitular",
-        start: "top bottom",
-        end: "+=" + Bo,
-        scrub: !0,
-        onToggle: function (t) {
-          t.isActive ? document.querySelector(".STitular").classList.add("devant") : document.querySelector(".STitular").classList.remove("devant")
-        }
-      },
-      opacity: 1,
-      ease: "none"
-    }), _n.fromTo(".innerInverse", {
-      y: -1 * Bo + "px"
-    }, {
-      scrollTrigger: {
-        trigger: ".STitular",
-        start: "top bottom",
-        end: "+=" + Bo,
-        scrub: !0
-      },
-      y: "0px",
-      ease: "none"
-    }), _n.fromTo(".img1", {
-      x: 0,
-      y: .4 * Bo + "px"
-    }, {
-      scrollTrigger: {
-        trigger: ".STitular",
-        start: "top top",
-        end: "+=" + Bo,
-        scrub: !0
-      },
-      x: -.35 * window.innerWidth + "px",
-      y: "-25%"
-    }), _n.fromTo(".img1 .transi", {
-      scale: .5
-    }, {
-      scrollTrigger: {
-        trigger: ".STitular",
-        start: "top top",
-        end: "+=" + Bo,
-        scrub: !0
-      },
-      scale: .2
-    }), _n.fromTo(".img2", {
+    }),  _n.fromTo(".img2", {
       x: 0,
       y: .4 * Bo + "px"
     }, {
