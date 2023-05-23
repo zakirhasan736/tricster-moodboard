@@ -3067,7 +3067,7 @@
   else if (window.innerWidth >= 768){
     Oo.create({
       trigger: ".SConcert",
-      start: "top 95%",
+      start: "top 100%",
       end: "bottom top",
       pin: ".debut"
     });
