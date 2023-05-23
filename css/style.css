@@ -673,12 +673,12 @@ body.normal {
   z-index: 1;
   overflow: inherit !important;
 }
-/* @media (pointer: coarse) {
+@media (pointer: coarse) {
   #garciScroll {
     will-change: unset;
     overflow: hidden !important;
   }
-} */
+}
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

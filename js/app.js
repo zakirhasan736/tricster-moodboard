@@ -2578,7 +2578,7 @@
   }();
 
   function qo() {
-    return (("ontouchstart" in window) && navigator.msMinTouchPoints)
+    return (("ontouchstart" in window))
   }
   var Co, Lo = (function (t) {
       function e(t) {
