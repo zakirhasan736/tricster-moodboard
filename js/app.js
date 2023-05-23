@@ -2578,7 +2578,7 @@
   }();
 
   function qo() {
-    return (("ontouchstart" in window) && navigator.msMinTouchPoints && navigator.OMinTouchPoints && navigator.MozMinTouchPoints && navigator.MsMinTouchPoints && navigator.WebkitMinTouchPoints)
+    return (("ontouchstart" in window) && navigator.msMaxTouchPoints)
   }
   var Co, Lo = (function (t) {
       function e(t) {
@@ -2897,7 +2897,7 @@
   window.innerHeight > window.innerWidth && (Fo = !0), window.addEventListener("mousemove", (function (t) {
     t.x, t.y
   })), window.addEventListener("resize", (function (t) {
-    qo() ? (window.innerWidth > window.innerHeight && Fo && document.location.reload(), window.innerWidth < window.innerHeight && (Fo = !0)) : (Bo = window.innerHeight, Oo.getAll().forEach((function (t) {
+    (Bo = window.innerHeight, Oo.getAll().forEach((function (t) {
       t.kill()
     })), Xo(), Po.resize())
   })), Oo.addEventListener("refreshInit", (function () {})), Oo.addEventListener("refresh", (function () {}));
@@ -3486,8 +3486,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       pinSpacing: !1
     }),
 
-     qo() || (
-      
+    
       document.querySelectorAll(".people span,.people div, .people .mot").forEach((function (t) {
       var e = t.getBoundingClientRect().left - 1.25 * window.innerWidth;
       _n.to(t, {
@@ -3527,7 +3526,6 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       ease: "none"
     })
 
-    );
     // gsap.registerPlugin(ScrollTrigger);
     if(window.innerWidth >= 1281){
     _n.to(".truth2 .mot", {
@@ -3689,7 +3687,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         ease: "power4.inOut",
         onComplete: function () {
           Do = !1, document.getElementById("volet").style.display = "none"
-          Do = !0, document.getElementById("bodyMain").classList.remove("active-nav")
+          Do = !1, document.getElementById("bodyMain").classList.remove("active-nav")
         }
       }) : (n = 300, _n.to("#volet", {
         y: 100 * -i + "%",
@@ -3702,14 +3700,14 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       })), _n.delayedCall(1, (function () {
         document.getElementById("menu").style.display = "none", ".SDeb" != t && document.querySelector(".nom").classList.add("visible");
         var r = 0;
-        r = qo() ? -window.scrollY : Po.current;
+        r =  -window.scrollY;
         var o = document.querySelector(t).getBoundingClientRect().top - r + e;
-        qo() ? window.scrollTo(0, o) : (Po.scrollTop = o, Po.current = i * (200 + n) - o)
+        window.scrollTo(0, o) ;
       }))
     }
   }
   window.addEventListener("DOMContentLoaded", (function () {
-    if (No.load(No, Yo, Vo, Uo), Yo.load(No, Yo, Vo, Uo), Vo.load(No, Yo, Vo, Uo), Uo.load(No, Yo, Vo, Uo), qo() && window.scrollTo(0, 0),
+    if (No.load(No, Yo, Vo, Uo), Yo.load(No, Yo, Vo, Uo), Vo.load(No, Yo, Vo, Uo), Uo.load(No, Yo, Vo, Uo), window.scrollTo(0, 0),
      document.addEventListener("click", (function (t) {
         if (Wo || (Wo = !0, new Lo({
             withAudio: !0
@@ -3775,7 +3773,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
           var n = window.scrollY;
           Oo.getAll().forEach((function (t) {
             t.kill()
-          })), Xo(), qo() ? window.scrollTo(0, n) : Po.wheel(), _n.to("#carousel", {
+          })), Xo(), Po.wheel(), _n.to("#carousel", {
             opacity: 0,
             duration: .4,
             onComplete: function () {
@@ -3994,7 +3992,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
           jo(".SDeb", 0, !1), document.querySelector(".nom").classList.remove("visible")
         } else t.target.closest(".toSon1") ? t.target.closest(".toSon1").classList.contains("actif") ? (t.target.closest(".toSon1").classList.remove("actif"), No.mute()) : (t.target.closest(".toSon1").classList.add("actif"), No.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon2") ? t.target.closest(".toSon2").classList.contains("actif") ? (t.target.closest(".toSon2").classList.remove("actif"), Yo.mute()) : (t.target.closest(".toSon2").classList.add("actif"), Yo.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon3") ? t.target.closest(".toSon3").classList.contains("actif") ? (t.target.closest(".toSon3").classList.remove("actif"), Vo.mute()) : (t.target.closest(".toSon3").classList.add("actif"), Vo.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon4") && (t.target.closest(".toSon4").classList.contains("actif") ? (t.target.closest(".toSon4").classList.remove("actif"), Uo.mute()) : (t.target.closest(".toSon4").classList.add("actif"), Uo.play(No, Yo, Vo, Uo)));
         var u, l, c, d, p, f
-      })), qo() || (Oo.scrollerProxy(Ro, {
+      })), (Oo.scrollerProxy(Ro, {
         scrollTop: function (t) {
           return arguments.length && (Po.current = -t), -Po.current
         },
