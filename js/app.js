@@ -2576,7 +2576,7 @@
   }();
 
   function qo() {
-    return !(!("ontouchstart" in window) && !navigator.msMaxTouchPoints)
+    return (("ontouchstart" in window) && navigator.msMaxTouchPoints)
   }
   var Co, Lo = (function (t) {
       function e(t) {
