@@ -3087,7 +3087,7 @@ header .nom.visible {
 }
 @media screen and (max-width:991px) {
   .hero-section {
-    background: url('../img/home-bg1.webp');
+    background: url('../img/banner-mobile.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
