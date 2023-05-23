@@ -2544,9 +2544,7 @@
       key: "init",
       value: function () {
         var t = this;
-        this.height = document.querySelector(this.elmt).clientHeight - window.innerHeight, this.deplacement = _n.quickSetter(this.elmt, "y", "px"), this.addTicker = function () {
-          t.playTicker()
-        }, _n.ticker.add(this.addTicker)
+    _n.ticker.add(this.addTicker)
       }
     }, {
       key: "wheel",
@@ -2578,7 +2576,7 @@
   }();
 
   function qo() {
-    return (("ontouchstart" in window) && navigator.msMaxTouchPoints)
+    return !(!("ontouchstart" in window) && !navigator.msMaxTouchPoints)
   }
   var Co, Lo = (function (t) {
       function e(t) {

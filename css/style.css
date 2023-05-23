@@ -917,6 +917,7 @@ header .nom.visible {
   position: absolute;
   right: var(--leftMargin);
   top: 4vh;
+  z-index: 999999;
 }
 #menu {
   position: fixed;
