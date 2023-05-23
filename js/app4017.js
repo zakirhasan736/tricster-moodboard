@@ -2902,7 +2902,7 @@
   })), window.addEventListener("resize", (function (t) {
     qo() ? (window.innerWidth > window.innerHeight && Fo && document.location.reload(), window.innerWidth < window.innerHeight && (Fo = !0)) : (Bo = window.innerHeight, Oo.getAll().forEach((function (t) {
       t.kill()
-    })))
+    })), Xo(), Po.resize())
   })), Oo.addEventListener("refreshInit", (function () {})), Oo.addEventListener("refresh", (function () {}));
   var Io, zo, Ho, No = new Mo(document.querySelector(".son1"), document.querySelector(".toSon1")),
     Yo = new Mo(document.querySelector(".son2"), document.querySelector(".toSon2")),
@@ -2910,19 +2910,85 @@
     Uo = new Mo(document.querySelector(".son4"), document.querySelector(".toSon4"));
 
   function Xo() {
-   
+    Oo.create({
+      trigger: ".SIntro",
+      start: "top top",
+      end: "+=" + 4.5 * window.innerHeight + "px",
+      pin: !0
+    });
+    var t = [];
+    document.querySelectorAll(".mot1 span").forEach((function (e) {
+      return t.push(e)
+    })), t.reverse();
+    var e = [];
+    document.querySelectorAll(".mot2 span").forEach((function (t) {
+      return e.push(t)
+    })), e.reverse();
+    var r = 0;
+    t.forEach((function (t) {
+      _n.to(t, {
+        scrollTrigger: {
+          trigger: ".innerSIntro",
+          start: "top 0%",
+          end: "top -" + 1.2 * window.innerHeight + "-=" + r,
+          scrub: !0
+        },
+        y: "-250%",
+        ease: "none"
+      }), r += .48 * window.innerHeight
+    }));
     var n = 0;
-   Oo.create({
+    e.forEach((function (t) {
+      _n.to(t, {
+        scrollTrigger: {
+          trigger: ".innerSIntro",
+          start: "top 0%",
+          end: "top -" + 1.2 * window.innerHeight + "-=" + n,
+          scrub: !0
+        },
+        y: "-250%",
+        ease: "none"
+      }), n += .48 * window.innerHeight
+    })), _n.fromTo(".intro", {
+      x: .375 * window.innerWidth + "px",
+      y: -.35 * Bo + "px"
+    }, {
+      scrollTrigger: {
+        id: "finaltest",
+        trigger: ".innerSIntro",
+        start: "top 0%",
+        end: "+=" + 4.5 * window.innerHeight + "px",
+        scrub: !0,
+        onLeave: function () {
+          document.querySelector(".nom").classList.add("visible")
+        },
+        onEnterBack: function () {
+          document.querySelector(".nom").classList.remove("visible")
+        }
+      },
+      scale: 1,
+      x: "0px",
+      y: "0px",
+      ease: "none"
+    }), _n.to(".intro img", {
+      scrollTrigger: {
+        trigger: ".innerSIntro",
+        start: "top 0%",
+        end: "+=" + 4.5 * window.innerHeight + "px",
+        scrub: !0
+      },
+      scale: 1
+    }), Oo.create({
       trigger: ".biographie",
       start: "top top",
-          end: "bottom bottom",
+      end: "+=" + 2 * window.innerHeight + "px",
       pin: !0,
       pinSpacing: !1
     }), _n.to(".biographie div", {
       scrollTrigger: {
         trigger: ".cita-a",
-        start: "top top",
-        end: "bottom bottom",
+        start: "top top+=" + 2 * window.innerHeight + "px",
+        end: "+=" + window.innerHeight + "px",
         scrub: !0
       },
       opacity: 0,
@@ -2988,8 +3054,17 @@
         ease: "none"
       })
     }));
-
-     _n.to(".mot2", {
+    var i = document.querySelector(".SReal").getBoundingClientRect().left + Bo;
+    _n.to(".SReal", {
+      scrollTrigger: {
+        trigger: ".innerSlider",
+        start: "top bottom-=" + i,
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "100%",
+      ease: "none"
+    }), _n.to(".mot2", {
       scrollTrigger: {
         trigger: ".innerSlider",
         start: "top bottom-=" + (i - window.innerWidth),
@@ -3007,6 +3082,17 @@
       },
       x: "-10%",
       ease: "none"
+    }), _n.fromTo(".SReal2 .mask", {
+      x: "-100%"
+    }, {
+      scrollTrigger: {
+        trigger: ".innerSlider",
+        start: "top bottom-=" + i,
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "0%",
+      ease: "none"
     }), document.querySelectorAll(".grosTitre span").forEach((function (t) {
       var e = t.getBoundingClientRect().left - window.innerWidth;
       _n.to(t, {
@@ -3018,12 +3104,21 @@
         },
         y: 0
       })
-    })),  _n.set(".debut", {
+    })), _n.to(".innerSlider", {
+      scrollTrigger: {
+        trigger: ".innerSlider",
+        end: "+=" + (document.querySelector(".innerSlider").offsetWidth - window.innerWidth),
+        scrub: !0,
+        pin: !0
+      },
+      x: -document.querySelector(".innerSlider").offsetWidth + window.innerWidth + "px",
+      ease: "none"
+    }), _n.set(".debut", {
       opacity: 0
     }), _n.to(".debut", {
       scrollTrigger: {
         trigger: ".innerCita2",
-        start: "top 0%",
+        start: "top 50%",
         end: "top top",
         scrub: !0
       },
@@ -3033,54 +3128,18 @@
       scrollTrigger: {
         trigger: ".innerCita2",
         start: "bottom bottom",
-        end: "bottom 0%",
+        end: "bottom 50%",
         scrub: !0
       },
       opacity: 0,
       ease: "none",
       immediateRender: !1
-    });
-    if(window.innerWidth >= 1400){
-    Oo.create({
+    }), Oo.create({
       trigger: ".SConcert",
-      start: "top 70%",
-      end: "bottom top",
+      start: "top bottom",
+      end: "bottom 100%",
       pin: ".debut"
-    });
-  }
-  else if (window.innerWidth >= 1200){
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 80%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-  else if (window.innerWidth >= 992){
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 90%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-  else if (window.innerWidth >= 768){
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 95%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-  else{
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 100%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-    document.querySelectorAll(".citaD").forEach((function (t) {
+    }), document.querySelectorAll(".citaD").forEach((function (t) {
       Oo.create({
         trigger: t,
         start: "top 50%",
@@ -3088,117 +3147,44 @@
         onEnter: function () {
           if (t.classList.contains("citaDSpe")) {
             var e = t.getAttribute("data-cit");
-            document.querySelectorAll(".verb > div")[e].classList.contains("actif") || (document.querySelectorAll(".verb > div")[e].classList.add("actif"), document.querySelectorAll(".verb > div").forEach((function (t) {
-              t != document.querySelectorAll(".verb > div")[e] && t.classList.remove("actif")
-            })), _n.killTweensOf(".verb div"),
-             _n.to(".verb div ul", {
+            document.querySelectorAll(".verb > span")[e].classList.contains("actif") || (document.querySelectorAll(".verb > span")[e].classList.add("actif"), document.querySelectorAll(".verb > span").forEach((function (t) {
+              t != document.querySelectorAll(".verb > span")[e] && t.classList.remove("actif")
+            })), _n.killTweensOf(".verb span"), _n.to(".verb span span", {
               opacity: 0,
-              x: "-40%",
+              y: "-40%",
               duration: .2,
               ease: "power2.in"
-            }), 
-
-            _n.fromTo(".verb .actif ul", {
-              x: "40%"
+            }), _n.fromTo(".verb span.actif span", {
+              y: "40%"
             }, {
               opacity: 1,
               duration: .2,
-              x: "0%",
+              y: "0%",
               delay: .2,
               stagger: .05,
               ease: "power2.out"
-            }),
-                     _n.to(".verb div h3", {
-              opacity: 0,
-              x: "-40%",
-              duration: .2,
-              ease: "power2.in"
-            }), 
-            
-            _n.fromTo(".verb .actif h3", {
-              x: "40%"
-            }, {
-              opacity: 1,
-              duration: .2,
-             x: "0%",
-              delay: .2,
-              stagger: .05,
-              ease: "power2.out"
-            }),
-            _n.to(".verb div span", {
-              opacity: 0,
-              x: "-40%",
-              duration: .2,
-              ease: "power2.in"
-            }), 
-            
-            _n.fromTo(".verb .actif span", {
-              x: "40%"
-            }, {
-              opacity: 1,
-              duration: .2,
-              x: "0%",
-              delay: .2,
-              stagger: .05,
-              ease: "power2.out"
-            })
-            )
+            }))
           }
         },
         onEnterBack: function () {
           var e = t.getAttribute("data-cit");
-          document.querySelectorAll(".verb > div")[e].classList.contains("actif") || (document.querySelectorAll(".verb > div")[e].classList.add("actif"), document.querySelectorAll(".verb > div").forEach((function (t) {
-            t != document.querySelectorAll(".verb > div")[e] && t.classList.remove("actif")
-          })), _n.killTweensOf(".verb div"),
-           _n.to(".verb div ul", {
+          document.querySelectorAll(".verb > span")[e].classList.contains("actif") || (document.querySelectorAll(".verb > span")[e].classList.add("actif"), document.querySelectorAll(".verb > span").forEach((function (t) {
+            t != document.querySelectorAll(".verb > span")[e] && t.classList.remove("actif")
+          })), _n.killTweensOf(".verb span"), _n.to(".verb span span", {
             opacity: 0,
-            x: "-40%",
+            y: "-40%",
             duration: .2,
             ease: "power2.in"
-          }),
-           _n.fromTo(".verb .actif ul", {
-            x: "40%"
+          }), _n.fromTo(".verb span.actif span", {
+            y: "40%"
           }, {
             opacity: 1,
             duration: .2,
-            x: "0%",
+            y: "0%",
             delay: .2,
             stagger: .05,
             ease: "power2.out"
-          }),
-          _n.to(".verb div h3", {
-            opacity: 0,
-            x: "-40%",
-            duration: .2,
-            ease: "power2.in"
-          }),
-           _n.fromTo(".verb .actif h3", {
-            x: "40%"
-          }, {
-            opacity: 1,
-            duration: .2,
-            x: "0%",
-            delay: .2,
-            stagger: .05,
-            ease: "power2.out"
-          }),
-          _n.to(".verb div span", {
-            opacity: 0,
-            x: "-40%",
-            duration: .2,
-            ease: "power2.in"
-          }),
-           _n.fromTo(".verb .actif span", {
-            x: "40%"
-          }, {
-            opacity: 1,
-            duration: .2,
-            x: "0%",
-            delay: .2,
-            stagger: .05,
-            ease: "power2.out"
-          })
-          )
+          }))
         }
       })
     })), _n.to(".truth .mot", {
@@ -3224,7 +3210,133 @@
         ease: "none"
       })
     }));
-document.querySelectorAll(".lien span").forEach((function (t) {
+    
+    var o = window.innerHeight - document.querySelector(".innerImg").offsetHeight - .15 * window.innerWidth;
+    Oo.create({
+      trigger: ".liste",
+      start: "top 0%",
+      end: "bottom bottom-=" + o + "px",
+      pin: ".innerImg"
+    }), _n.to(".innerImg img", {
+      scrollTrigger: {
+        trigger: ".liste",
+        start: "top 0%",
+        end: "bottom bottom-=" + o + "px",
+        scrub: !0
+      },
+      scale: 1,
+      ease: "none"
+    }), _n.to("#intermission", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "100vw",
+      ease: "none"
+    });
+    var s = window.innerWidth + Bo;
+    _n.to(".notes", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top bottom",
+        end: "+=" + s + "px",
+        scrub: !0
+      },
+      scale: 1.2,
+      ease: "none"
+    }), _n.to(".notes", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top-=" + window.innerWidth + "px",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "30%",
+      ease: "none",
+      immediateRender: !1
+    }), _n.to(".continue", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      opacity: 0,
+      ease: "none"
+    }), _n.to(".inner_inter .phrase, .inner_inter .inter", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top-=" + window.innerWidth + "px",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      opacity: 0,
+      ease: "none"
+    }), Oo.create({
+      trigger: ".SRecording",
+      start: "top bottom",
+      end: "+=" + (Bo + 2 * window.innerWidth) + "px",
+      onEnter: function () {
+        _n.killTweensOf(".uneNote"), _n.fromTo(".uneNote", {
+          y: "-150%",
+          opacity: 0
+        }, {
+          y: "0%",
+          opacity: 1,
+          stagger: -.1,
+          duration: 1.1,
+          delay: .5,
+          ease: "elastic.out"
+        })
+      },
+      onEnterBack: function () {
+        _n.killTweensOf(".uneNote"), _n.fromTo(".uneNote", {
+          y: "-150%",
+          opacity: 0
+        }, {
+          y: "0%",
+          opacity: 1,
+          stagger: -.1,
+          duration: 1.2,
+          ease: "elastic.out"
+        })
+      },
+      onLeave: function () {
+        1 == window.quuneFois && (No.mute(), Yo.mute(), Vo.mute(), Uo.mute(), document.querySelectorAll(".uneNote").forEach((function (t) {
+          t.classList.remove("actif")
+        })))
+      },
+      onLeaveBack: function () {
+        1 == window.quuneFois && (No.mute(), Yo.mute(), Vo.mute(), Uo.mute(), document.querySelectorAll(".uneNote").forEach((function (t) {
+          t.classList.remove("actif")
+        })))
+      }
+    }), document.querySelectorAll(".SRecording .lArt").forEach((function (t) {
+      var e = t.getBoundingClientRect().left + Bo - .8 * window.innerWidth;
+      _n.fromTo(t.querySelector("span"), {
+        x: "-100%"
+      }, {
+        scrollTrigger: {
+          trigger: ".contenu__inner",
+          start: "top bottom-=" + e,
+          end: "+=" + t.offsetWidth,
+          scrub: !0
+        },
+        x: "0%",
+        ease: "none"
+      })
+    })), _n.to(".contenu__inner", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        end: "+=" + (document.querySelector(".contenu__inner").offsetWidth - window.innerWidth),
+        scrub: !0,
+        pin: !0
+      },
+      x: -document.querySelector(".contenu__inner").clientWidth + window.innerWidth + "px",
+      ease: "none"
+    }), document.querySelectorAll(".lien span").forEach((function (t) {
       _n.to(t, {
         scrollTrigger: {
           trigger: ".STitular",
@@ -3235,7 +3347,25 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         x: 0,
         ease: "none"
       })
-    })),  _n.fromTo(".div1", {
+    })), document.querySelector(".social").classList.remove("bl"), _n.set(".social", {
+      backgroundColor: "#000"
+    }), _n.to(".social", {
+      scrollTrigger: {
+        trigger: ".STitular",
+        start: "top top+=" + (window.innerHeight + window.innerWidth) + "px",
+        end: "+=" + window.innerWidth,
+        scrub: !0,
+        onLeave: function () {
+          document.querySelector(".social").classList.add("bl")
+        },
+        onEnterBack: function () {
+          document.querySelector(".social").classList.remove("bl")
+        }
+      },
+      x: "100%",
+      ease: "none",
+      immediateRender: !1
+    }), _n.fromTo(".div1", {
       y: "250%"
     }, {
       scrollTrigger: {
@@ -3435,8 +3565,36 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scrub: !0
       },
       scale: .2
-    }), 
-    _n.to(".animO", {
+    }), Oo.create({
+      trigger: ".SProfessor",
+      start: "top top",
+      end: "+=" + 2 * Bo + "px",
+      pin: !0,
+      onLeave: function () {
+        document.querySelector(".SProfessor h2").classList.add("actif")
+      },
+      onEnterBack: function () {
+        document.querySelector(".SProfessor h2").classList.remove("actif")
+      }
+    }), _n.to(".portrait", {
+      scrollTrigger: {
+        trigger: ".SProfessor",
+        start: "top bottom",
+        end: "+=" + 3 * Bo + "px",
+        scrub: !0
+      },
+      scale: .265,
+      ease: "none"
+    }), _n.to(".portrait img", {
+      scrollTrigger: {
+        trigger: ".SProfessor",
+        start: "top bottom",
+        end: "+=" + 3 * Bo + "px",
+        scrub: !0
+      },
+      scale: 1,
+      ease: "none"
+    }), _n.to(".animO", {
       scrollTrigger: {
         trigger: ".SProfessor",
         start: "top bottom",
@@ -3445,8 +3603,31 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       },
       y: "0%",
       ease: "none"
+    }), document.querySelectorAll(".SStudent .lArt").forEach((function (t) {
+      var e = t.getBoundingClientRect().left + Bo - .8 * window.innerWidth;
+      _n.fromTo(t.querySelector("span"), {
+        x: "-100%"
+      }, {
+        scrollTrigger: {
+          trigger: ".scrollHori2",
+          start: "top bottom-=" + e,
+          end: "+=" + t.offsetWidth,
+          scrub: !0
+        },
+        x: "0%",
+        ease: "none"
+      })
+    })), _n.to(".scrollHori2", {
+      scrollTrigger: {
+        trigger: ".scrollHori2",
+        end: "+=" + (document.querySelector(".scrollHori2").offsetWidth - window.innerWidth),
+        pin: !0,
+        scrub: !0
+      },
+      x: -document.querySelector(".scrollHori2").clientWidth + window.innerWidth + "px",
+      ease: "none"
     });
-   
+    var a = Bo + document.querySelector(".alumnis .listeNom").offsetWidth + 3 * window.innerWidth;
     _n.fromTo(".fullImg img", {
       x: "-95%"
     }, {
@@ -3476,6 +3657,46 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scrub: !0
       },
       x: "-20%",
+      ease: "none"
+    }), _n.to(".rond", {
+      scrollTrigger: {
+        trigger: ".SAuthor",
+        start: "top top+=" + (Bo + window.innerWidth),
+        end: "+=" + window.innerWidth,
+        scrub: !0,
+        onUpdate: function (t) {
+          0 != _n.getProperty(".rond", "scale") && _n.set(".rond img", {
+            scale: 1 / _n.getProperty(".rond", "scale")
+          })
+        }
+      },
+      x: window.innerWidth + "px",
+      scale: 1,
+      ease: "none"
+    }), _n.to(".innerRond", {
+      scrollTrigger: {
+        trigger: ".SAuthor",
+        start: "top top+=" + Bo + "px",
+        end: "+=" + Bo + "px",
+        scrub: !0,
+        onEnter: function () {
+          document.querySelector(".rond").classList.add("visible")
+        },
+        onLeaveBack: function () {
+          document.querySelector(".rond").classList.remove("visible")
+        }
+      },
+      y: Bo + "px",
+      opacity: 0,
+      ease: "none"
+    }), _n.to(".rond img", {
+      scrollTrigger: {
+        trigger: ".SAuthor",
+        start: "top top+=" + (Bo + window.innerWidth),
+        end: "+=" + (window.innerWidth + Bo) + "px",
+        scrub: !0
+      },
+      rotation: -120,
       ease: "none"
     });
     var u = window.innerWidth;
@@ -3515,6 +3736,22 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       ease: "none"
     }), _n.set(".zoom", {
       opacity: 1
+    }), _n.to(".innerImgZ img", {
+      scrollTrigger: {
+        trigger: ".innerImgZ",
+        start: "top 100%",
+        end: "top bottom",
+        endTrigger: ".finAuthor",
+        scrub: !0,
+        onUpdate: function (t) {
+          t.progress > .5 && _n.set(".zoom", {
+            opacity: _n.utils.mapRange(.5, 1, 1, .15, t.progress),
+            blur: _n.utils.mapRange(.5, 1, 0, 20, t.progress)
+          })
+        }
+      },
+      scale: .9,
+      ease: "none"
     }), Oo.create({
       trigger: ".people",
       start: "top top",
@@ -3525,18 +3762,14 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         })
       }
     });
-    var l = document.querySelector(".SContact").offsetHeight;
+    var l = document.querySelector(".SContact").offsetHeight + document.querySelector(".finAuthor").offsetHeight;
     Oo.create({
       trigger: ".innerImgZ",
       start: "top top",
       end: "+=" + l + Bo + "px",
       pin: !0,
       pinSpacing: !1
-    }),
-
-     qo() || (
-      
-      document.querySelectorAll(".people span,.people div, .people .mot").forEach((function (t) {
+    }), qo() || (document.querySelectorAll(".people span").forEach((function (t) {
       var e = t.getBoundingClientRect().left - 1.25 * window.innerWidth;
       _n.to(t, {
         scrollTrigger: {
@@ -3549,22 +3782,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scale: 1,
         ease: "elastic.inOut"
       })
-    })),
-    document.querySelectorAll(".horizontal-text-anim-itemretion .mot").forEach((function (t) {
-      var e = t.getBoundingClientRect().left - 1.25 * window.innerWidth;
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".people",
-          start: "top top-=" + e,
-          end: "+=" + window.innerWidth,
-          scrub: !0
-        },
-        x: '-10%',
-        scale: 1,
-        ease: "none"
-      })
-    })),
-    _n.to(".people", {
+    })), _n.to(".people", {
       scrollTrigger: {
         trigger: ".people",
         end: "+=" + (document.querySelector(".people").offsetWidth - window.innerWidth),
@@ -3573,161 +3791,14 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       },
       x: -document.querySelector(".people").offsetWidth + window.innerWidth + "px",
       ease: "none"
-    })
-
-    );
-    // gsap.registerPlugin(ScrollTrigger);
-    if(window.innerWidth >= 1281){
-    _n.to(".truth2 .mot", {
-      scrollTrigger: {
-        trigger: ".truth2 .repere",
-        start: "top 80%",
-        end: "+=" + 2 * Bo + "px",
-        pin: ".pin-intraction-box",
-        scrub: !0,
-      },
-      scale: 8.55,
-      x: "-380%",
-      marginRight: '0',
-      y: "200%",
-      ease: "none"
-    })
-  }
-  else if (window.innerWidth >= 992 ){
-    _n.to(".truth2 .mot", {
-      scrollTrigger: {
-        trigger: ".truth2 .repere",
-        start: "top 80%",
-        end: "+=" + 2 * Bo + "px",
-        pin: ".pin-intraction-box",
-        scrub: !0,
-      },
-      scale: 5.55,
-      x: "-220%",
-      marginRight: '0',
-      y: "70%",
-      ease: "none"
-    })
-  }
-  else if (window.innerWidth >= 768 ){
-    _n.to(".truth2 .mot", {
-      scrollTrigger: {
-        trigger: ".truth2 .repere",
-        start: "top 80%",
-        end: "+=" + 2 * Bo + "px",
-        pin: ".pin-intraction-box",
-        scrub: !0,
-      },
-      scale: 3.8,
-      x: "-120%",
-      marginRight: '0',
-      y: "0%",
-      ease: "none"
-    })
-  }
-  else{
-    _n.to(".truth2 .mot", {
-      scrollTrigger: {
-        trigger: ".truth2 .repere",
-        start: "top 80%",
-        end: "+=" + 2 * Bo + "px",
-        pin: ".pin-intraction-box",
-        scrub: !0,
-      },
-      scale: 3.8,
-      x: "-0%",
-      marginRight: '0',
-      y: "0%",
-      ease: "none"
-    })
-  }
-  ;
-   document.querySelectorAll(".truth2 span").forEach((function (t) {
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".bottom-block-text-wrapper",
-          start: "top 80%",
-          end: "top top",
-          scrub: !0
-        },
-        y: Math.floor(100 * Math.random()) + 0 + "%",
-        ease: "none"
-      })
-    }));
-    var t = [];
-    document.querySelectorAll(".mot1 span").forEach((function (e) {
-      return t.push(e)
-    })), t.reverse();
-    var e = [];
-    document.querySelectorAll(".mot2 span").forEach((function (t) {
-      return e.push(t)
-    })), e.reverse();
-    var r = 0;
-    t.forEach((function (t) {
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".bottom-block-text-wrapper",
-          start: "top -50%",
-          end: "top -" + 1.2 * window.innerHeight + "-=" + r,
-          scrub: !0
-        },
-        y: "-250%",
-        ease: "none"
-      }), r += .48 * window.innerHeight
-    }));
-    var n = 0;
-    e.forEach((function (t) {
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".bottom-block-text-wrapper",
-          start: "top -50%",
-          end: "top -" + 1.2 * window.innerHeight + "-=" + n,
-          scrub: !0
-        },
-        y: "-250%",
-        ease: "none"
-      }), n += .48 * window.innerHeight
-    })),
-    _n.fromTo(".intro", {
-      x: .375 * window.innerWidth + "px",
-      y: -.35 * Bo + "px"
-    }, {
-      scrollTrigger: {
-        id: "finaltest",
-        trigger: ".bottom-block-text-wrapper",
-        start: "top 0%",
-        end: "+=" + 4.5 * window.innerHeight + "px",
-        scrub: !0,
-        onLeave: function () {
-          document.querySelector(".nom").classList.add("visible")
-        },
-        onEnterBack: function () {
-          document.querySelector(".nom").classList.remove("visible")
-        }
-      },
-      scale: 1,
-      x: "0px",
-      y: "0px",
-      ease: "none"
-    }), _n.to(".intro img", {
-      scrollTrigger: {
-        trigger: ".bottom-block-text-wrapper",
-        start: "top 0%",
-        end: "+=" + 4.5 * window.innerHeight + "px",
-        scrub: !0
-      },
-      scale: 1
-    });
+    }))
   }
 
   function jo(t, e, r) {
     if (!Do) {
       document.getElementById("volet").style.display = "block", Do = !0;
-      document.getElementById("bodyMain").classList.remove("active-nav"), Do = !0;
       var n = 0;
-      // ".SDeb" == t && document.querySelector(".nom").classList.remove("visible");
-      Do = !0, document.getElementById("bodyMain").classList.remove("active-nav")
-
+      ".SDeb" == t && document.querySelector(".nom").classList.remove("visible");
       var i = document.querySelector(t).getBoundingClientRect().top > 0 ? 1 : -1;
       ".SProfessor" == t && 1 == i && (e = 2 * Bo + 1), !0 !== r ? _n.fromTo("#volet", {
         y: 100 * i + "%"
@@ -3737,7 +3808,6 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         ease: "power4.inOut",
         onComplete: function () {
           Do = !1, document.getElementById("volet").style.display = "none"
-          Do = !0, document.getElementById("bodyMain").classList.remove("active-nav")
         }
       }) : (n = 300, _n.to("#volet", {
         y: 100 * -i + "%",
@@ -3745,7 +3815,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         ease: "power4.inOut",
         delay: 1,
         onComplete: function () {
-          Do = !1,  document.getElementById("volet").style.display = "none"
+          Do = !1, document.querySelector(".notesB").style.display = "none", document.getElementById("volet").style.display = "none"
         }
       })), _n.delayedCall(1, (function () {
         document.getElementById("menu").style.display = "none", ".SDeb" != t && document.querySelector(".nom").classList.add("visible");
@@ -3757,8 +3827,26 @@ document.querySelectorAll(".lien span").forEach((function (t) {
     }
   }
   window.addEventListener("DOMContentLoaded", (function () {
-    if (No.load(No, Yo, Vo, Uo), Yo.load(No, Yo, Vo, Uo), Vo.load(No, Yo, Vo, Uo), Uo.load(No, Yo, Vo, Uo), qo() && window.scrollTo(0, 0),
-     document.addEventListener("click", (function (t) {
+    if (No.load(No, Yo, Vo, Uo), Yo.load(No, Yo, Vo, Uo), Vo.load(No, Yo, Vo, Uo), Uo.load(No, Yo, Vo, Uo), qo() && window.scrollTo(0, 0), document.getElementById("annee").addEventListener("change", (function (t) {
+        document.querySelector(".toAnnee").innerHTML = t.target.value, _n.to(".pastE.affiche", {
+          opacity: 0,
+          duration: .2,
+          stagger: .06,
+          onComplete: function () {
+            document.querySelectorAll(".pastE").forEach((function (t) {
+              t.style.display = "none"
+            })), document.querySelectorAll('.pastE[data-annee="' + document.getElementById("annee").value + '"]').forEach((function (t) {
+              t.style.display = "block", t.classList.add("affiche")
+            })), Oo.getAll().forEach((function (t) {
+              t.kill()
+            })), Xo(), alert("cas: annee"), Po.resize(), _n.to('.pastE[data-annee="' + document.getElementById("annee").value + '"]', {
+              opacity: 1,
+              duration: .2,
+              stagger: .1
+            })
+          }
+        })
+      })), document.addEventListener("click", (function (t) {
         if (Wo || (Wo = !0, new Lo({
             withAudio: !0
           })), t.target.closest(".play1")) _n.to(".innerVideo .inner", {
@@ -3957,9 +4045,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
           })
         }());
         else if (t.target.closest(".toMenu") && !Do) {
-          Do = !0, document.getElementById("bodyMain").classList.add("active-nav"),
-          Do = !0, document.getElementById("volet").style.display = "block",
-           _n.fromTo("#volet", {
+          Do = !0, document.getElementById("volet").style.display = "block", _n.fromTo("#volet", {
             y: "-100%"
           }, {
             y: "100%",
@@ -4004,13 +4090,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
             t.getBoundingClientRect().top < window.innerHeight && i++
           }));
           for (var o = 0; o <= i; o++) document.querySelectorAll(".entree button")[o].classList.add("passe")
-        } else if (t.target.closest(".toClose") && !Do)
-         Do = !0,
-          document.getElementById("volet").style.display = "block",
-         document.getElementById("bodyMain").classList.remove("active-nav"),
-
-
-          _n.fromTo("#volet", {
+        } else if (t.target.closest(".toClose") && !Do) Do = !0, document.getElementById("volet").style.display = "block", _n.fromTo("#volet", {
           y: "100%"
         }, {
           y: "-100%",

@@ -489,7 +489,7 @@ html.normal,
 body.normal {
   overflow: initial;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   html,
   body {
     overflow: initial;
@@ -497,7 +497,7 @@ body.normal {
   body {
     height: auto;
   }
-}
+} */
 #inApp {
   position: fixed;
   top: 0;
@@ -603,9 +603,9 @@ body.normal {
   transform: scale(2.4) translate(-22%, 0);
 }
 @media (orientation: portrait) {
-  body {
+  /* body {
     overflow: hidden;
-  }
+  } */
   #orientation {
     display: -webkit-flex;
     display: flex;
@@ -673,12 +673,12 @@ body.normal {
   z-index: 1;
   overflow: inherit !important;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   #garciScroll {
     will-change: unset;
     overflow: hidden !important;
   }
-}
+} */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1024,14 +1024,14 @@ header .nom.visible {
 .entree button.passe {
   color: #3f3f3f;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .entree {
     line-height: 10vh;
   }
   .entree .nom {
     line-height: 10vh;
   }
-}
+} */
 .SIntro2,
 .SIntro {
   z-index: 2;
@@ -1384,11 +1384,11 @@ header .nom.visible {
   align-items: center;
   will-change: transform;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .innerSlider {
     will-change: unset;
   }
-}
+} */
 .innerFix2 {
   position: relative;
 }
@@ -1411,14 +1411,14 @@ header .nom.visible {
   left: -1px;
   top: 0;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .scrollHori {
     padding: 10vh 0 0;
   }
   .scrollHori .grosTitre span {
     line-height: 90vh;
   }
-}
+} */
 .SCitations {
   padding: 0 0 100vh;
   /* background: #fff; */
@@ -1766,7 +1766,7 @@ header .nom.visible {
   -webkit-transform: translate(30%, -114%) rotate(45deg);
   transform: translate(30%, -114%) rotate(45deg);
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .uneDate a span:hover img {
     -webkit-transform: none !important;
     transform: none !important;
@@ -1775,7 +1775,7 @@ header .nom.visible {
     -webkit-transform: none !important;
     transform: none !important;
   }
-}
+} */
 .uneDate:last-child {
   border: 0;
 }
@@ -2003,11 +2003,11 @@ header .nom.visible {
 .contenu__inner.efface {
   /* background: #fff; */
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .contenu__inner {
     will-change: unset;
   }
-}
+} */
 .social {
   position: relative;
 }
@@ -2517,11 +2517,11 @@ header .nom.visible {
   padding: 0 200vw 0 calc(100vw + var(--leftMargin));
   position: relative;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .scrollHori2 {
     will-change: unset;
   }
-}
+} */
 .innerPlayer {
   margin: 22.5vh 18vw 0 15vw;
 }
@@ -2838,7 +2838,7 @@ header .nom.visible {
 .people.inverter-slider-item img {
   object-fit: cover;
 }
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .people {
     padding: 15vw calc(var(--col) + var(--gutter) + var(--leftMargin)) 22vw;
     display: block;
@@ -2853,7 +2853,7 @@ header .nom.visible {
   .people div {
     display: inline-block;
   }
-}
+} */
 .respectful {
   border-top: 1px solid #fff;
   margin: 10vh 0 0;
@@ -3717,6 +3717,7 @@ color: #FFFFFF;
     height: 450px;
   }
 }
+#mobile-script{display: none !important;}
 @media screen and (max-width:767px) {
   .bottom-block-text-wrapper .fixI h1 {
     font-size: 32px;
@@ -3728,5 +3729,5 @@ color: #FFFFFF;
   .SContact.passage .bottom-block-text-wrapper .wrap.text-content-state-block p:last-child {
     margin-top: 220px;
   }
-  
+  #mobile-script{display: block !important;} 
 }
