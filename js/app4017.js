@@ -2902,7 +2902,7 @@
   })), window.addEventListener("resize", (function (t) {
     qo() ? (window.innerWidth > window.innerHeight && Fo && document.location.reload(), window.innerWidth < window.innerHeight && (Fo = !0)) : (Bo = window.innerHeight, Oo.getAll().forEach((function (t) {
       t.kill()
-    })), Xo(), Po.resize())
+    })))
   })), Oo.addEventListener("refreshInit", (function () {})), Oo.addEventListener("refresh", (function () {}));
   var Io, zo, Ho, No = new Mo(document.querySelector(".son1"), document.querySelector(".toSon1")),
     Yo = new Mo(document.querySelector(".son2"), document.querySelector(".toSon2")),
