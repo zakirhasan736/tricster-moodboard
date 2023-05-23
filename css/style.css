@@ -3085,14 +3085,31 @@ header .nom.visible {
 .socials-link-widgets .socials-link-item a {
   color: #fff;
 }
+video::-webkit-media-controls{
+  display: none !important;
+}
 @media screen and (max-width:991px) {
   .hero-section {
     background: url('../img/banner-mobile.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-position-y: -25%;
+    background-position-y: 0%;
+    background-position-x: 0%;
   }
+}
+@media screen and (max-width:767px) {
+  .hero-section {
+    background: url('../img/banner-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: -25%;
+    background-position-x: 0%;
+  }
+}
+@media screen and (max-width:991px) {
+
   .hero-section-wrapper.varient2 {
     display: block;
     height: 100%;
