@@ -2578,7 +2578,7 @@
   }();
 
   function qo() {
-    return (("ontouchstart" in window) && navigator.msMaxTouchPoints)
+    return (("ontouchstart" in window) && navigator.msMinTouchPoints)
   }
   var Co, Lo = (function (t) {
       function e(t) {
@@ -2886,10 +2886,7 @@
     Po = new Eo("#garciScroll");
   _n.registerPlugin(Oo);
   var Ro = document.getElementById("garciScroll");
-  ((navigator.userAgent || navigator.vendor || window.opera).indexOf("Instagram") > -1 || function () {
-    var t = navigator.userAgent || navigator.vendor || window.opera;
-    return t.indexOf("FBAN") > -1 || t.indexOf("FBAV") > -1
-  }()) && (document.getElementById("inApp").style.display = "block"), qo() || Oo.defaults({
+ Oo.defaults({
     scroller: Ro
   });
   var Do = !1,
