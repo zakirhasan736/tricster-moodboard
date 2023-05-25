@@ -637,9 +637,12 @@ body.normal {
   position: relative;
   min-height: 100vh;
   z-index: 1;
+}
+@media screen and (min-width:992px) { 
+#garciScroll {
   overflow: inherit !important;
 }
-
+}
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -791,8 +794,7 @@ header {
   justify-content: space-between;
   -webkit-align-items: flex-start;
   align-items: flex-start;
-  z-index: 3;
-  /* mix-blend-mode: difference; */
+  z-index: 99999;
   color: #fff;
   pointer-events: none;
   margin-left: auto;
@@ -3711,6 +3713,25 @@ color: #FFFFFF;
     padding-top: 55px;
     height: 450px;
   }
+  section.hero-section {
+    overflow: hidden !important;
+}
+
+section.SConcert {
+    overflow: hidden !important;
+}
+
+section.fondNextRec {
+    overflow: hidden !important;
+}
+
+section.SContact.passage {
+    overflow: hidden !important;
+}
+
+.scroll-content {
+    overflow: hidden !important;
+}
 }
 #mobile-script{display: none !important;}
 @media screen and (max-width:767px) {
@@ -3725,4 +3746,23 @@ color: #FFFFFF;
     margin-top: 220px;
   }
   #mobile-script{display: block !important;} 
+  section.hero-section {
+    overflow: hidden !important;
+}
+
+section.SConcert {
+    overflow: hidden !important;
+}
+
+section.fondNextRec {
+    overflow: hidden !important;
+}
+
+section.SContact.passage {
+    overflow: hidden !important;
+}
+
+.scroll-content {
+    overflow: hidden !important;
+}
 }
