@@ -878,7 +878,6 @@ header .nom.visible {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: #000; */
   z-index: 4;
   -webkit-transform-origin: 100% 0;
   transform-origin: 100% 0;
@@ -892,7 +891,7 @@ header .nom.visible {
   position: absolute;
   right: var(--leftMargin);
   top: 4vh;
-  z-index: 999999;
+  z-index: 99999999;
 }
 #menu {
   position: fixed;
@@ -903,6 +902,7 @@ header .nom.visible {
   height: 100%;
   background: #181818;
   z-index: 3;
+  z-index: 999999;
   color: #fff;
 }
 #menu ol {
