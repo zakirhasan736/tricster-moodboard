@@ -1659,7 +1659,7 @@ figure figcaption {
     height: auto;
     padding-top: 90px;
   }
-  .left-text-block-content .text-block-section-btn {
+ .text-block-section-btn {
     height: 52px;
     font-size: 18px;
     width: 190px;
@@ -1753,6 +1753,12 @@ figure figcaption {
   .music-section-title-items .second-sec-title span {
     display: inline-flex;
   }
+  .wrap.innerCita2.music-section-main-wrap .trickster-img-box.mobo-viewed img {
+    width: 100%;
+  }
+  .wrap.innerCita2.music-section-main-wrap .trickster-img-box.mobo-viewed {
+    width: 100%;
+  }
 }
 @media screen and (max-width:991px) and (min-width:768px) {
   .cita2.flex.music-section .fin {
@@ -1792,4 +1798,71 @@ figure figcaption {
   }
   .text-iteration.mobo-viewed.elf-active {transform: none;}
 }
-
+@media screen and (max-width:767px) {
+  .wrap.innerCita2.music-section-main-wrap .trickster-img-box.mobo-viewed {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    max-width: 203px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .verb > .actif {
+    display: inline-block;
+    text-align: center;
+  }
+  .verb > div ul {
+    justify-content: center;
+  }
+  .cita.cita-a > .flex {
+    padding-top: 166px;
+    padding-bottom: 0;
+  }
+  .cita.cita-b > .flex {
+    padding-top: 202px;
+    padding-bottom: 132px;
+  }
+  .toNextTitre.actif .text-block-section-btn {
+    display: flex !important;
+  }
+  .left-text-block-content .text-block-title {
+    font-size: 28px;
+    margin-bottom: 0px;
+  }
+  .SNextPast.content-text-block-wrpper .period .liste.passage .headerPeriod.text-block-content.flex {
+    gap: 14px;
+  }
+  .SNextPast.content-text-block-wrpper .period .liste.passage .headerPeriod.text-block-content.flex .toNextTitre.actif .bio.indent {
+    font-size: 18px;
+  }
+  .pin-intraction-box .truth2 .mot img {
+    width: 100%;
+    transform: scale(1.7) translateX(-24%) !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .truth2 {
+    margin-bottom: 10vh;
+  }
+.mobo-bottom-footer-text-cont {
+  text-align: center;
+  padding: 99px 15px 116px;
+  background: #000;
+}
+.mobo-bottom-footer-text-cont .foot-logo-itme {
+  margin-bottom: 8px;
+}
+.mobo-bottom-footer-text-cont .p-tech-small {
+  color: #fff;
+  margin-bottom: 60px;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+}
+@media screen  and (max-width:475px) and (min-width:395px){
+  .pin-intraction-box .truth2 .mot img {
+    transform: scale(1.7) translateX(-28.5%) !important;
+  }
+}

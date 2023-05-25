@@ -3000,7 +3000,7 @@ header .nom.visible {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('../img/banner-modal.png');
+  background: url('../img//banner-modal.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3069,7 +3069,7 @@ video::-webkit-media-controls{
 }
 @media screen and (max-width:991px) {
   .hero-section {
-    background: url('../img/banner-mobile.png');
+    background: url('../img/banner-mobile.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3079,7 +3079,7 @@ video::-webkit-media-controls{
 }
 @media screen and (max-width:767px) {
   .hero-section {
-    background: url('../img/banner-mobile.png');
+    background: url('../img/banner-mobile.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3243,7 +3243,7 @@ video::-webkit-media-controls{
 .wrap.innerCita2.music-section-main-wrap .verb > div span {
   margin-bottom: 80px;
 }
-.wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(2) {
+.wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(3) {
   margin-bottom: 53px;
   font-family: var(--primary-font);
   font-style: normal;
@@ -3260,12 +3260,12 @@ video::-webkit-media-controls{
   .wrap.innerCita2.music-section-main-wrap .verb > div span {
     margin-bottom: 40px;
   }
-  .wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(2) {
+  .wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(3) {
     margin-bottom: 25px;
   }
 }
 @media screen and (max-width:1280px)  {
-  .wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(2) {
+  .wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(3) {
     font-size: 48px;
     line-height: 58px;
   }
@@ -3282,7 +3282,7 @@ video::-webkit-media-controls{
   .verb > .actif .audio-striming img {
     width: 72px;
   }
-  .wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(2) {
+  .wrap.innerCita2.music-section-main-wrap .verb > div span:nth-child(3) {
     font-size: 32px;
     line-height: 1;
   }
@@ -3470,11 +3470,10 @@ video::-webkit-media-controls{
   color: #ffffff;
   max-width: 510px;
 }
-.left-text-block-content .text-block-section-btn {
+.text-block-section-btn {
 	height: 68px;
 	margin-left: 0;
 	margin-right: auto;
-	display: block;
 	display: flex;
 	align-items: center;
 	border-radius: 50px;
@@ -3490,6 +3489,7 @@ video::-webkit-media-controls{
 	text-transform: uppercase;
 	width: 245px;
 	justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width:1280px) {
   .left-text-block-content .text-block-title {
@@ -3497,7 +3497,7 @@ video::-webkit-media-controls{
   }
 }
 @media screen and (max-width:991px)  {
-  .left-text-block-content .text-block-section-btn {
+  .text-block-section-btn {
     height: 52px;
     font-size: 18px;
     width: 152px;
