@@ -263,11 +263,12 @@ if (window.innerWidth <= 991){
 $(document).ready(function() {
     $('.elf-navigation-bar').on('click', function(){
         document.querySelector('.elf-navigation-wrapper').style.display = "block";
+        $('.elf-navigation-wrapper').addClass('info-open');
+        console.logo('clicked');
       })
       $('.elf-trigger-close').on('click', function(){
         document.querySelector('.elf-navigation-wrapper').style.display = "none";
       })
-
   });
   
 }(jQuery);

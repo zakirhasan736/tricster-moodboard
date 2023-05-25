@@ -792,7 +792,7 @@ header {
   -webkit-align-items: flex-start;
   align-items: flex-start;
   z-index: 3;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   color: #fff;
   pointer-events: none;
   margin-left: auto;
@@ -849,7 +849,7 @@ header .nom.visible {
 }
 @media (pointer: coarse) {
   .toMenu {
-    pointer-events: none;
+    pointer-events: painted;
   }
   .toMenu::before {
     content: '';
@@ -860,7 +860,7 @@ header .nom.visible {
     left: 0;
     /* background: #000; */
     z-index: 1;
-    pointer-events: none;
+    pointer-events: painted;
     transition-duration: 1s;
   }
   .toMenu.actif {
@@ -1133,6 +1133,7 @@ header .nom.visible {
   color: #fff;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 .SConcert::after {
   content: '';
