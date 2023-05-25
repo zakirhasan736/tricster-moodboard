@@ -14,9 +14,11 @@
             href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oxanium:wght@200;300;400;500;600;700;800&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/stricker-min.css">
+
     </head>
 
-    <body class="load" id="bodyMain">
+    <body class="load  elf-int-scroll elf-int" id="bodyMain">
 
         <div id="inApp" class="flex">
             <div class="tit">Get the full experience in the mobile browser</div>
@@ -36,18 +38,19 @@
                 <img class="fondIn" src="img/fb.jpg" alt="">
             </picture>
         </div>
+
         <header class="header-section">
             <div class="header-main-wrap flex">
                 <a href="/" width="120" class="site-brand-logo-box"><img src="./img/logo-blk-bg.png"
                         alt="brand company logo"></a>
-                <button class="toMenu leftHead">Menu</button>
+                <button class="toMenu leftHead elf-navigation-bar">Menu</button>
             </div>
         </header>
 
         <div id="volet"></div>
 
-        <section id="menu">
-            <button class="toClose leftHead">Close</button>
+        <section id="menu" class="elf-navigation-wrapper">
+            <button class="toClose leftHead elf-trigger-close">Close</button>
             <div class="core-header wrapper">
                 <div class="core-headings">
                     <!-- <a class="core-logo-link" href="/" aria-label="Home">
@@ -127,7 +130,7 @@
                                     href="https://www.tiktok.com/@thetrickstergroup?_t=8XdzHISnRSP&_r=1"><img width="42"
                                         src="./img/icons/Tik Tok.svg" alt=""></a></li>
                         </ul>
-                        <h1 class="banner-title">TRICKSTER</h1>
+                        <h1 class="banner-title" data-elf-anim="anim-text">TRICKSTER</h1>
                     </div>
                 </div>
             </section>
@@ -135,13 +138,13 @@
                 <div class="wrap innerCita2 music-section-main-wrap">
                     <div class="music-section-title-items">
                         <h2 class="second-sec-title">
-                            <span class="color-text">REAL CHANGE</span>
+                            <span class="color-text  d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text">REAL CHANGE</span>
                             IS NO JOKE
                         </h2>
                     </div>
 
                     <div class="cita2 flex music-section">
-                        <div class="debut">
+                        <div class="debut zoom-up effect-elf"  data-elf-anim="fade-up">
                             <div class="verb">
                                 <div class="actif">
                                     <h3 class="music-topic-title">LATEST RELEASE | TRICKSTER <span>FEATURING ROYAL
@@ -189,11 +192,14 @@
                     <div class="cita cita-a">
                         <div class="flex">
                             <div class="flex flexbis">
-                                <div class="content text-block-one">
+                                <div class="content text-block-one pc-viewed">
                                     <span>"</span> <span class="effet1">I</span> <span>can't</span> <span class="effet2">pretend</span><span>,</span>
                                     <br class="for-pc">
                                     <span>it</span> <span class="effet3">don't</span> <span>make</span>
                                     <span class="effet4">sense...</span><span>"</span>
+                                </div>
+                                <div class="content text-block-one mobo-viewed  d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text">
+                                    "I can't pretend, it don't make sense..."
                                 </div>
                             </div>
                         </div>
@@ -203,10 +209,14 @@
                 <div class="cita cita-b">
                     <div class="flex">
                         <div class="flex flexbis">
-                            <div class="content text-block-two">
+                            <div class="content text-block-two pc-viewed">
                                 <span>"</span><span>Somehow</span> <span>I'm</span> <span>still</span>
                                 <span>kicking</span> <span>it</span>
                                 <span>for</span> <span>one</span> <span>more</span> <span>night</span><span>"</span>
+                            </div>
+                            <div class="content text-block-two mobo-viewed  d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text">
+                                "Some how I'm still kicking it
+                                for one more night"
                             </div>
                         </div>
                     </div>
@@ -215,9 +225,10 @@
                 </div>
 
                 <div class="truth">
-                    <div class="mot">
+                    <div class="mot" data-elf-int="move-up">
                         <video width="560" height="315" controls="false" autoplay="true" muted="true" playsinline="true"
-                            loop="true">
+                            loop="true" class="zoom-up effect-elf"  data-elf-y="20%" data-elf-scale="2.2"
+                            data-elf="parallax" >
                             <source src="./mp4/video1.mp4" type="video/mp4">
                             <source src="movie.ogg" type="video/ogg">
                         </video>
@@ -232,23 +243,23 @@
                     <div class="period">
                         <div class="liste passage">
                             <div class="gauche">
-                                <div class="headerPeriod text-block-content flex">
+                                <div class="headerPeriod text-block-content flex" data-elf-anim="fade-up">
                                     <div class="left-text-block-content">
-                                        <h3 class="text-block-title">For the Trickster, it is more than just music.</h3>
-                                        <a href="https://trickster.com/w/story/" class="text-block-section-btn">Learn More</a>
+                                        <h3 class="text-block-title  d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text">For the Trickster, it is more than just music.</h3>
+                                        <a href="https://trickster.com/w/story/" class="text-block-section-btn  zoom-up effect-elf" data-elf="parallax">Learn More</a>
                                     </div>
                                     <div class="toNextTitre actif">
-                                        <p class="bio indent">
+                                        <p class="bio indent d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text">
                                             Being independent, and inspired by both personal hardship and his role as a
                                             global business leader, Trickster sees the world in a unique and compelling
                                             way. This view is born not out of learned ideology but of true, real-world
                                             experience. Having witnessed suffering in all four corners of the world,
                                             Trickster knows that now is the time to make change real.
                                         </p>
-                                        <p class="bio indent">
+                                        <p class="bio indent d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text">
                                             For Trickster Real Change is no Joke.
                                         </p>
-                                        <p class="bio indent"> To make change happen, we need to address not only the
+                                        <p class="bio indent d-flex align-items-center justify-content-start flex-wrap" data-elf-anim="anim-text""> To make change happen, we need to address not only the
                                             need, but also how we
                                             live and continue to thrive on this earth. The earth of which we are the
                                             custodians, not owners of. The sooner we all understand that the better.</p>
@@ -266,35 +277,37 @@
 
             <section class="SContact passage">
                 <div class="people inverter-slider-item">
-                    <div><img width="521" height="521" src="./img/slides1.png" alt=""></div>
-                    <div><img width="521" height="521" src="./img/slides2.png" alt=""></div>
-                    <div><img width="521" height="521" src="./img/slides3.png" alt=""></div>
-                    <div><img width="521" height="521" src="./img/slides4.png" alt=""></div>
+                    <div><img class=" zoom-up" data-elf="parallax"  width="521" height="521" src="./img/slides1.png" alt=""></div>
+                    <div><img class=" zoom-up" data-elf="parallax" width="521" height="521" src="./img/slides2.png" alt=""></div>
+                    <div><img class=" zoom-up" data-elf="parallax" width="521" height="521" src="./img/slides3.png" alt=""></div>
+                    <div><img class=" zoom-up" data-elf="parallax" width="521" height="521" src="./img/slides4.png" alt=""></div>
 
-                    <div class="horizontal-text-anim-itemretion">
+                    <div class="horizontal-text-anim-itemretion" data-elf-anim="fade-up">
                         <div class="text-anim-itemretion-cont">
-                            <p class="mot mot1">THE TRICKSTER</p>
-                            <p class="mot mot2"><a href="https://trickster.com/w/story/" class="intraction-anim-btn">LEARN MORE</a> IN REAL LIFE</p>
+                            <p class="mot mot1" data-elf-anim="anim-text">THE TRICKSTER</p>
+                            <p class="mot mot2" data-elf-anim="fade-up"><a href="https://trickster.com/w/story/" class="intraction-anim-btn zoom-up effect-elf" data-elf="parallax">LEARN MORE</a> IN REAL LIFE</p>
                         </div>
                     </div>
 
                     <!-- text animation -->
-                    <div class="text-iteration">
+                    <div class="text-iteration pc-viewed">
                         <span>A</span><span>&nbsp;</span>
                         <span>M</span><span>U</span><span>S</span><span>I</span><span>C</span>
                         <span>&nbsp;</span>
                         <span>M</span><span>O</span><span>V</span><span>E</span>
                         <span>M</span><span>E</span><span>N</span><span>T</span>
                     </div>
-
+                    <div class="text-iteration mobo-viewed" data-elf-anim="fade-up" data-elf-anim="anim-text">
+                        A  MUSIC MOVEMENT
+                    </div>
                 </div>
                 <div class="bottom-block-text-wrapper">
                     <div class="wrap text-content-state-block">
                         <div>
-                            <p class="bio indent">"Trickster is not just an idea;
+                            <p class="bio indent" data-elf-anim="anim-text">"Trickster is not just an idea;
                                 it is a movement."</p>
-                            <p class="bio indent">"For Trickster,
-                                <span class="color-text">Real Change is no Joke."</span>
+                            <p class="bio indent" data-elf-anim="fade-up">"For Trickster,
+                                <span class="color-text" data-elf-anim="anim-text">Real Change is no Joke."</span>
                             </p>
                         </div>
                     </div>
@@ -312,8 +325,8 @@
                             </h1>
                         </div>
                         <div class="truth2">
-                            <div class="mot">
-                                <img width="223" height="338" src="./img/bottomimage.png" alt="">
+                            <div class="mot" data-elf-int="move-up">
+                                <img width="223" height="338" src="./img/bottomimage.png" alt="" class="zoom-up effect-elf"  data-elf-y="20%"data-elf="parallax">
                             </div>
                             <div class="repere"></div>
                         </div>
@@ -406,9 +419,14 @@
         <audio class="son3" src="mp3/loop3.mp3" loop></audio>
         <audio class="son4" src="mp3/loop4.mp3" loop></audio>
 
+        <script src="./js/jquery-3.6.1.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script  src="./js/app.js"></script>
+        <script src="./js/scroll-magic-anim.js"></script>
+        <script src="./js/elf-anim-int.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/app.js"></script>
+
         <script>
             var swiper = new Swiper(".mySwiper", {
                 direction: "vertical",

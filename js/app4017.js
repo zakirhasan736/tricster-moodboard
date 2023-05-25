@@ -20,13 +20,13 @@ if(window.innerWidth >= 992){
    * @author: Jack Doyle, jack@greensock.com
    */
   var r, n, i, o, s, a, u, l, c, d, p, f, h, g = {
-      autoSleep: 120,
-      force3D: "auto",
-      nullTargetWarn: 1,
-      units: {
-        lineHeight: ""
-      }
-    },
+    autoSleep: 120,
+    force3D: "auto",
+    nullTargetWarn: 1,
+    units: {
+      lineHeight: ""
+    }
+  },
     m = {
       duration: .5,
       overwrite: !1,
@@ -64,7 +64,7 @@ if(window.innerWidth >= 992){
     M = function (t) {
       return k(t) || A(t)
     },
-    P = "function" == typeof ArrayBuffer && ArrayBuffer.isView || function () {},
+    P = "function" == typeof ArrayBuffer && ArrayBuffer.isView || function () { },
     R = Array.isArray,
     D = /(?:-?\.?\d|\.)+/gi,
     W = /[-+=.]*\d+[.e\-+]*\d*[e\-+]*\d*/g,
@@ -292,8 +292,8 @@ if(window.innerWidth >= 992){
     jt = function (t) {
       if (k(t)) return t;
       var e = q(t) ? t : {
-          each: t
-        },
+        each: t
+      },
         r = be(e.ease),
         n = e.from || 0,
         i = parseFloat(e.base) || 0,
@@ -304,10 +304,10 @@ if(window.innerWidth >= 992){
         l = n,
         c = n;
       return A(n) ? l = c = {
-          center: .5,
-          edges: .5,
-          end: 1
-        } [n] || 0 : !s && a && (l = n[0], c = n[1]),
+        center: .5,
+        edges: .5,
+        end: 1
+      }[n] || 0 : !s && a && (l = n[0], c = n[1]),
         function (t, s, d) {
           var p, f, h, g, m, _, v, w, b, T = (d || e).length,
             S = o[T];
@@ -362,7 +362,7 @@ if(window.innerWidth >= 992){
     te = function (t, e, r) {
       var n, i, o, s = t.labels,
         a = y;
-      for (n in s)(i = s[n] - e) < 0 == !!r && i && a > (i = Math.abs(i)) && (o = n, a = i);
+      for (n in s) (i = s[n] - e) < 0 == !!r && i && a > (i = Math.abs(i)) && (o = n, a = i);
       return o
     },
     ee = function (t, e, r) {
@@ -457,8 +457,8 @@ if(window.innerWidth >= 992){
         c = 0;
       if (!u) return t;
       if (u = u.map((function (t) {
-          return (t = ae(t, e, 1)) && l + (e ? t[0] + "," + t[1] + "%," + t[2] + "%," + t[3] : t.join(",")) + ")"
-        })), r && (o = ue(t), (n = r.c).join(a) !== o.c.join(a)))
+        return (t = ae(t, e, 1)) && l + (e ? t[0] + "," + t[1] + "%," + t[2] + "%," + t[3] : t.join(",")) + ")"
+      })), r && (o = ue(t), (n = r.c).join(a) !== o.c.join(a)))
         for (s = (i = t.replace(ce, "1").split(B)).length - 1; c < s; c++) a += i[c] + (~n.indexOf(c) ? u.shift() || l + "0,0,0,0)" : (o.length ? o : u.length ? u : r).shift());
       if (!i)
         for (s = (i = t.split(ce)).length - 1; c < s; c++) a += i[c] + u[c];
@@ -584,8 +584,8 @@ if(window.innerWidth >= 992){
     Ae = function t(e, r) {
       void 0 === r && (r = 1.70158);
       var n = function (t) {
-          return t ? --t * t * ((r + 1) * t + r) + 1 : 0
-        },
+        return t ? --t * t * ((r + 1) * t + r) + 1 : 0
+      },
         i = "out" === e ? n : "in" === e ? function (t) {
           return 1 - n(1 - t)
         } : Te(n);
@@ -628,8 +628,8 @@ if(window.innerWidth >= 992){
     return rt += t + "," + t + "Params,"
   }));
   var ke = function (t, e) {
-      this.id = b++, t._gsap = this, this.target = t, this.harness = e, this.get = e ? e.get : ot, this.set = e ? e.getSetter : Ne
-    },
+    this.id = b++, t._gsap = this, this.target = t, this.harness = e, this.get = e ? e.get : ot, this.set = e ? e.getSetter : Ne
+  },
     Oe = function () {
       function t(t, e) {
         var r = t.parent || n;
@@ -785,17 +785,17 @@ if(window.innerWidth >= 992){
           }
         }
         if (this._hasPause && !this._forcing && this._lock < 2 && (c = function (t, e, r) {
-            var n;
-            if (r > e)
-              for (n = t._first; n && n._start <= r;) {
-                if (!n._dur && "isPause" === n.data && n._start > e) return n;
-                n = n._next
-              } else
-                for (n = t._last; n && n._start >= r;) {
-                  if (!n._dur && "isPause" === n.data && n._start < e) return n;
-                  n = n._prev
-                }
-          }(this, at(m), at(i))) && (w -= i - (i = c._start)), this._tTime = w, this._time = i, this._act = !d, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = t, m = 0), !m && (i || !v && t >= 0) && !e && ee(this, "onStart"), i >= m && t >= 0)
+          var n;
+          if (r > e)
+            for (n = t._first; n && n._start <= r;) {
+              if (!n._dur && "isPause" === n.data && n._start > e) return n;
+              n = n._next
+            } else
+            for (n = t._last; n && n._start >= r;) {
+              if (!n._dur && "isPause" === n.data && n._start < e) return n;
+              n = n._prev
+            }
+        }(this, at(m), at(i))) && (w -= i - (i = c._start)), this._tTime = w, this._time = i, this._act = !d, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = t, m = 0), !m && (i || !v && t >= 0) && !e && ee(this, "onStart"), i >= m && t >= 0)
           for (o = this._first; o;) {
             if (s = o._next, (o._act || i >= o._start) && o._ts && c !== o) {
               if (o.parent !== this) return this.render(t, e, r);
@@ -806,18 +806,18 @@ if(window.innerWidth >= 992){
             }
             o = s
           } else {
-            o = this._last;
-            for (var S = t < 0 ? t : i; o;) {
-              if (s = o._prev, (o._act || S <= o._end) && o._ts && c !== o) {
-                if (o.parent !== this) return this.render(t, e, r);
-                if (o.render(o._ts > 0 ? (S - o._start) * o._ts : (o._dirty ? o.totalDuration() : o._tDur) + (S - o._start) * o._ts, e, r), i !== this._time || !this._ts && !l) {
-                  c = 0, s && (w += this._zTime = S ? -1e-8 : _);
-                  break
-                }
+          o = this._last;
+          for (var S = t < 0 ? t : i; o;) {
+            if (s = o._prev, (o._act || S <= o._end) && o._ts && c !== o) {
+              if (o.parent !== this) return this.render(t, e, r);
+              if (o.render(o._ts > 0 ? (S - o._start) * o._ts : (o._dirty ? o.totalDuration() : o._tDur) + (S - o._start) * o._ts, e, r), i !== this._time || !this._ts && !l) {
+                c = 0, s && (w += this._zTime = S ? -1e-8 : _);
+                break
               }
-              o = s
             }
+            o = s
           }
+        }
         if (c && !e && (this.pause(), c.render(i >= m ? 0 : -1e-8)._zTime = i >= m ? 1 : -1, this._ts)) return this._start = p, Et(this), this.render(t, e, r);
         this._onUpdate && !e && ee(this, "onUpdate", !0), (w === y && y >= this.totalDuration() || !w && m) && (p !== this._start && Math.abs(d) === Math.abs(this._ts) || this._lock || ((t || !v) && (w === y && this._ts > 0 || !w && this._ts < 0) && bt(this, 1), e || t < 0 && !m || !w && !m || (ee(this, w === y ? "onComplete" : "onReverseComplete", !0), this._prom && !(w < y && this.timeScale() > 0) && this._prom())))
       }
@@ -939,18 +939,18 @@ if(window.innerWidth >= 992){
     _forcing: 0
   });
   var qe, Ce = function (t, e, r, n, i, o, s) {
-      var a, u, l, c, d, p, f, h, g = new $e(this._pt, t, e, 0, 1, Ue, null, i),
-        m = 0,
-        y = 0;
-      for (g.b = r, g.e = n, r += "", (f = ~(n += "").indexOf("random(")) && (n = Jt(n)), o && (o(h = [r, n], t, e), r = h[0], n = h[1]), u = r.match(F) || []; a = F.exec(n);) c = a[0], d = n.substring(m, a.index), l ? l = (l + 1) % 5 : "rgba(" === d.substr(-5) && (l = 1), c !== u[y++] && (p = parseFloat(u[y - 1]) || 0, g._pt = {
-        _next: g._pt,
-        p: d || 1 === y ? d : ",",
-        s: p,
-        c: "=" === c.charAt(1) ? parseFloat(c.substr(2)) * ("-" === c.charAt(0) ? -1 : 1) : parseFloat(c) - p,
-        m: l && l < 4 ? Math.round : 0
-      }, m = F.lastIndex);
-      return g.c = m < n.length ? n.substring(m, n.length) : "", g.fp = s, (I.test(n) || f) && (g.e = 0), this._pt = g, g
-    },
+    var a, u, l, c, d, p, f, h, g = new $e(this._pt, t, e, 0, 1, Ue, null, i),
+      m = 0,
+      y = 0;
+    for (g.b = r, g.e = n, r += "", (f = ~(n += "").indexOf("random(")) && (n = Jt(n)), o && (o(h = [r, n], t, e), r = h[0], n = h[1]), u = r.match(F) || []; a = F.exec(n);) c = a[0], d = n.substring(m, a.index), l ? l = (l + 1) % 5 : "rgba(" === d.substr(-5) && (l = 1), c !== u[y++] && (p = parseFloat(u[y - 1]) || 0, g._pt = {
+      _next: g._pt,
+      p: d || 1 === y ? d : ",",
+      s: p,
+      c: "=" === c.charAt(1) ? parseFloat(c.substr(2)) * ("-" === c.charAt(0) ? -1 : 1) : parseFloat(c) - p,
+      m: l && l < 4 ? Math.round : 0
+    }, m = F.lastIndex);
+    return g.c = m < n.length ? n.substring(m, n.length) : "", g.fp = s, (I.test(n) || f) && (g.e = 0), this._pt = g, g
+  },
     Le = function (t, e, r, n, i, o, s, a, u) {
       k(n) && (n = n(i || 0, t, o));
       var l, c = t[e],
@@ -961,11 +961,11 @@ if(window.innerWidth >= 992){
     Me = function (t, e, r, n, i, o) {
       var s, a, u, c;
       if (J[t] && !1 !== (s = new J[t]).init(i, s.rawVars ? e[t] : function (t, e, r, n, i) {
-          if (k(t) && (t = Re(t, i, e, r, n)), !q(t) || t.style && t.nodeType || R(t) || P(t)) return A(t) ? Re(t, i, e, r, n) : t;
-          var o, s = {};
-          for (o in t) s[o] = Re(t[o], i, e, r, n);
-          return s
-        }(e[t], n, i, o, r), r, n, o) && (r._pt = a = new $e(r._pt, i, t, 0, 1, s.render, s, 0, s.priority), r !== l))
+        if (k(t) && (t = Re(t, i, e, r, n)), !q(t) || t.style && t.nodeType || R(t) || P(t)) return A(t) ? Re(t, i, e, r, n) : t;
+        var o, s = {};
+        for (o in t) s[o] = Re(t[o], i, e, r, n);
+        return s
+      }(e[t], n, i, o, r), r, n, o) && (r._pt = a = new $e(r._pt, i, t, 0, 1, s.render, s, 0, s.priority), r !== l))
         for (u = r._ptLookup[r._targets.indexOf(i)], c = s._props.length; c--;) u[s._props[c]] = a;
       return s
     },
@@ -992,20 +992,20 @@ if(window.innerWidth >= 992){
       if (I && (!L || !b) && (b = "none"), e._ease = be(b, m.ease), e._yEase = q ? ve(be(!0 === q ? b : q, m.ease)) : 0, q && e._yoyo && !e._repeat && (q = e._yEase, e._yEase = e._ease, e._ease = q), !I) {
         if (y = (p = D[0] ? it(D[0]).harness : 0) && w[p.prop], o = _t(w, Z), R && R.render(-1, !0).kill(), x) {
           if (bt(e._startAt = Be.set(D, ht({
-              data: "isStart",
-              overwrite: !1,
-              parent: W,
-              immediateRender: !0,
-              lazy: C(S),
-              startAt: null,
-              delay: 0,
-              onUpdate: A,
-              onUpdateParams: k,
-              callbackScope: O,
-              stagger: 0
-            }, x))), T)
+            data: "isStart",
+            overwrite: !1,
+            parent: W,
+            immediateRender: !0,
+            lazy: C(S),
+            startAt: null,
+            delay: 0,
+            onUpdate: A,
+            onUpdateParams: k,
+            callbackScope: O,
+            stagger: 0
+          }, x))), T)
             if (i > 0) M || (e._startAt = 0);
-            else if (P && !(i < 0 && R)) return void(i && (e._zTime = i))
+            else if (P && !(i < 0 && R)) return void (i && (e._zTime = i))
         } else if (E && P)
           if (R) !M && (e._startAt = 0);
           else if (i && (T = !1), a = ht({
@@ -1016,12 +1016,12 @@ if(window.innerWidth >= 992){
             stagger: 0,
             parent: W
           }, o), y && (a[p.prop] = y), bt(e._startAt = Be.set(D, a)), T) {
-          if (!i) return
-        } else t(e._startAt, _);
+            if (!i) return
+          } else t(e._startAt, _);
         for (e._pt = 0, S = P && C(S) || S && !P, s = 0; s < D.length; s++) {
           if (d = (l = D[s])._gsap || nt(D)[s]._gsap, e._ptLookup[s] = h = {}, $[d.id] && Q.length && ct(), g = B === D ? s : B.indexOf(l), p && !1 !== (f = new p).init(l, y || o, e, g, B) && (e._pt = u = new $e(e._pt, l, f.name, 0, 1, f.render, f, 0, f.priority), f._props.forEach((function (t) {
-              h[t] = u
-            })), f.priority && (c = 1)), !p || y)
+            h[t] = u
+          })), f.priority && (c = 1)), !p || y)
             for (a in o) J[a] && (f = Me(a, o, e, g, l, B)) ? f.priority && (c = 1) : h[a] = u = Le.call(e, l, a, "get", o[a], g, B, 0, w.stringFilter);
           e._op && e._op[s] && e.kill(l, e._op[s]), F && e._pt && (qe = e, n.killTweensOf(l, h, e.globalTime(0)), v = !e.parent, qe = 0), e._pt && S && ($[d.id] = 1)
         }
@@ -1052,9 +1052,9 @@ if(window.innerWidth >= 992){
           D = (R(e) || P(e) ? O(e[0]) : "length" in o) ? [e] : Ut(e);
         if (u._targets = D.length ? nt(D) : X("GSAP target " + e + " not found. https://greensock.com", !g.nullTargetWarn) || [], u._ptLookup = [], u._overwrite = T, S || x || M(v) || M(w)) {
           if (o = u.vars, (l = u.timeline = new Ee({
-              data: "nested",
-              defaults: A || {}
-            })).kill(), l.parent = l._dp = t(u), l._start = 0, S) ht(l.vars.defaults, {
+            data: "nested",
+            defaults: A || {}
+          })).kill(), l.parent = l._dp = t(u), l._start = 0, S) ht(l.vars.defaults, {
             ease: "none"
           }), S.forEach((function (t) {
             return l.to(D, t, ">")
@@ -1120,22 +1120,22 @@ if(window.innerWidth >= 992){
           p = this._ptLookup,
           f = this._pt;
         if ((!e || "all" === e) && function (t, e) {
-            for (var r = t.length, n = r === e.length; n && r-- && t[r] === e[r];);
-            return r < 0
-          }(c, d)) return "all" === e && (this._pt = 0), re(this);
+          for (var r = t.length, n = r === e.length; n && r-- && t[r] === e[r];);
+          return r < 0
+        }(c, d)) return "all" === e && (this._pt = 0), re(this);
         for (n = this._op = this._op || [], "all" !== e && (A(e) && (a = {}, st(e, (function (t) {
-            return a[t] = 1
-          })), e = a), e = function (t, e) {
-            var r, n, i, o, s = t[0] ? it(t[0]).harness : 0,
-              a = s && s.aliases;
-            if (!a) return e;
-            for (n in r = mt({}, e), a)
-              if (n in r)
-                for (i = (o = a[n].split(",")).length; i--;) r[o[i]] = r[n];
-            return r
-          }(c, e)), l = c.length; l--;)
+          return a[t] = 1
+        })), e = a), e = function (t, e) {
+          var r, n, i, o, s = t[0] ? it(t[0]).harness : 0,
+            a = s && s.aliases;
+          if (!a) return e;
+          for (n in r = mt({}, e), a)
+            if (n in r)
+              for (i = (o = a[n].split(",")).length; i--;) r[o[i]] = r[n];
+          return r
+        }(c, e)), l = c.length; l--;)
           if (~d.indexOf(c[l]))
-            for (a in i = p[l], "all" === e ? (n[l] = e, s = i, o = {}) : (o = n[l] = n[l] || {}, s = e), s)(u = i && i[a]) && ("kill" in u.d && !0 !== u.d.kill(a) || wt(this, u, "_pt"), delete i[a]), "all" !== o && (o[a] = 1);
+            for (a in i = p[l], "all" === e ? (n[l] = e, s = i, o = {}) : (o = n[l] = n[l] || {}, s = e), s) (u = i && i[a]) && ("kill" in u.d && !0 !== u.d.kill(a) || wt(this, u, "_pt"), delete i[a]), "all" !== o && (o[a] = 1);
         return this._initted && !this._pt && f && re(this), this
       }, o.to = function (t, e) {
         return new o(t, e, arguments[2])
@@ -1175,8 +1175,8 @@ if(window.innerWidth >= 992){
     }
   }));
   var Fe = function (t, e, r) {
-      return t[e] = r
-    },
+    return t[e] = r
+  },
     Ie = function (t, e, r) {
       return t[e](r)
     },
@@ -1222,7 +1222,7 @@ if(window.innerWidth >= 992){
     Qe = function (t) {
       for (var e, r, n, i, o = t._pt; o;) {
         for (e = o._next, r = n; r && r.pr > o.pr;) r = r._next;
-        (o._prev = r ? r._prev : i) ? o._prev._next = o: n = o, (o._next = r) ? r._prev = o : i = o, o = e
+        (o._prev = r ? r._prev : i) ? o._prev._next = o : n = o, (o._next = r) ? r._prev = o : i = o, o = e
       }
       t._pt = n
     },
@@ -1267,8 +1267,8 @@ if(window.innerWidth >= 992){
     quickSetter: function (t, e, r) {
       if ((t = Ut(t)).length > 1) {
         var n = t.map((function (t) {
-            return er.quickSetter(t, e, r)
-          })),
+          return er.quickSetter(t, e, r)
+        })),
           i = n.length;
         return function (t) {
           for (var e = i; e--;) n[e](t)
@@ -1422,9 +1422,9 @@ if(window.innerWidth >= 992){
     duration: 0
   });
   var Ke = function (t, e) {
-      for (var r = t._pt; r && r.p !== e && r.op !== e && r.fp !== e;) r = r._next;
-      return r
-    },
+    for (var r = t._pt; r && r.p !== e && r.op !== e && r.fp !== e;) r = r._next;
+    return r
+  },
     tr = function (t, e) {
       return {
         name: t,
@@ -1433,11 +1433,11 @@ if(window.innerWidth >= 992){
           n._onInit = function (t) {
             var n, i;
             if (A(r) && (n = {}, st(r, (function (t) {
-                return n[t] = 1
-              })), r = n), e) {
+              return n[t] = 1
+            })), r = n), e) {
               for (i in n = {}, r) n[i] = e(r[i]);
               r = n
-            }! function (t, e) {
+            } ! function (t, e) {
               var r, n, i, o = t._targets;
               for (r in e)
                 for (n = o.length; n--;)(i = t._ptLookup[n][r]) && (i = i.d) && (i._pt && (i = Ke(i, r)), i && i.modifier && i.modifier(e[r], t, o[n], r))
@@ -1450,7 +1450,7 @@ if(window.innerWidth >= 992){
       name: "attr",
       init: function (t, e, r, n, i) {
         var o, s;
-        for (o in e)(s = this.add(t, "setAttribute", (t.getAttribute(o) || 0) + "", e[o], n, i, 0, 0, o)) && (s.op = o), this._props.push(o)
+        for (o in e) (s = this.add(t, "setAttribute", (t.getAttribute(o) || 0) + "", e[o], n, i, 0, 0, o)) && (s.op = o), this._props.push(o)
       }
     }, {
       name: "endArray",
@@ -1459,16 +1459,17 @@ if(window.innerWidth >= 992){
       }
     }, tr("roundProps", Gt), tr("modifiers"), tr("snap", Zt)) || Je;
   Be.version = Ee.version = er.version = "3.6.0", a = 1, L() && he()
-  /*!
-   * CSSPlugin 3.6.0
-   * https://greensock.com
-   *
-   * Copyright 2008-2021, GreenSock. All rights reserved.
-   * Subject to the terms at https://greensock.com/standard-license or for
-   * Club GreenSock members, the agreement issued with that membership.
-   * @author: Jack Doyle, jack@greensock.com
-   */
-  ;
+
+    /*!
+     * CSSPlugin 3.6.0
+     * https://greensock.com
+     *
+     * Copyright 2008-2021, GreenSock. All rights reserved.
+     * Subject to the terms at https://greensock.com/standard-license or for
+     * Club GreenSock members, the agreement issued with that membership.
+     * @author: Jack Doyle, jack@greensock.com
+     */
+    ;
   var rr, nr, ir, or, sr, ar, ur, lr, cr = {},
     dr = 180 / Math.PI,
     pr = Math.PI / 180,
@@ -1550,7 +1551,7 @@ if(window.innerWidth >= 992){
         s = this.style.cssText;
       if (ir.appendChild(n), n.appendChild(this), this.style.display = "block", e) try {
         r = this.getBBox(), this._gsapBBox = this.getBBox, this.getBBox = t
-      } catch (t) {} else this._gsapBBox && (r = this._gsapBBox());
+      } catch (t) { } else this._gsapBBox && (r = this._gsapBBox());
       return i && (o ? i.insertBefore(this, o) : i.appendChild(this)), ir.removeChild(n), this.style.cssText = s, r
     },
     Fr = function (t, e) {
@@ -1769,7 +1770,7 @@ if(window.innerWidth >= 992){
     fn = function (t, e, r) {
       var n, i, o, s, a, u, l, c = ar.style,
         d = r._gsap;
-      for (i in c.cssText = getComputedStyle(r).cssText + ";position:absolute;display:block;", c[Cr] = e, nr.body.appendChild(ar), n = rn(ar, 1), cr)(o = d[i]) !== (s = n[i]) && "perspective,force3D,transformOrigin,svgOrigin".indexOf(i) < 0 && (a = Ht(o) !== (l = Ht(s)) ? Vr(r, i, o, l) : parseFloat(o), u = parseFloat(s), t._pt = new $e(t._pt, d, i, a, u - a, _r), t._pt.u = l || 0, t._props.push(i));
+      for (i in c.cssText = getComputedStyle(r).cssText + ";position:absolute;display:block;", c[Cr] = e, nr.body.appendChild(ar), n = rn(ar, 1), cr) (o = d[i]) !== (s = n[i]) && "perspective,force3D,transformOrigin,svgOrigin".indexOf(i) < 0 && (a = Ht(o) !== (l = Ht(s)) ? Vr(r, i, o, l) : parseFloat(o), u = parseFloat(s), t._pt = new $e(t._pt, d, i, a, u - a, _r), t._pt.u = l || 0, t._props.push(i));
       nr.body.removeChild(ar)
     };
   st("padding,margin,Width,Radius", (function (t, e) {
@@ -1804,47 +1805,47 @@ if(window.innerWidth >= 992){
         if ("autoRound" !== d && (s = e[d], !J[d] || !Me(d, e, r, n, t, i)))
           if (l = typeof s, c = Zr[d], "function" === l && (l = typeof (s = s.call(r, n, t, i))), "string" === l && ~s.indexOf("random(") && (s = Jt(s)), c) c(this, t, d, s, r) && (w = 1);
           else if ("--" === d.substr(0, 2)) o = (getComputedStyle(t).getPropertyValue(d) + "").trim(), s += "", p = Ht(o), (f = Ht(s)) ? p !== f && (o = Vr(t, d, o, f) + f) : p && (s += p), this.add(k, "setProperty", o, s, n, i, 0, 0, d);
-      else if ("undefined" !== l) {
-        if (O && d in O ? (o = "function" == typeof O[d] ? O[d].call(r, n, t, i) : O[d], d in g.units && !Ht(o) && (o += g.units[d]), "=" === (o + "").charAt(1) && (o = Ur(t, d))) : o = Ur(t, d), u = parseFloat(o), (h = "string" === l && "=" === s.charAt(1) ? +(s.charAt(0) + "1") : 0) && (s = s.substr(2)), a = parseFloat(s), d in yr && ("autoAlpha" === d && (1 === u && "hidden" === Ur(t, "visibility") && a && (u = 0), Nr(this, k, "visibility", u ? "inherit" : "hidden", a ? "inherit" : "hidden", !a)), "scale" !== d && "transform" !== d && ~(d = yr[d]).indexOf(",") && (d = d.split(",")[0])), m = d in cr)
-          if (y || ((_ = t._gsap).renderTransform && !e.parseTransform || rn(t, e.parseTransform), v = !1 !== e.smoothOrigin && _.smooth, (y = this._pt = new $e(this._pt, k, Cr, 0, 1, _.renderTransform, _, 0, -1)).dep = 1), "scale" === d) this._pt = new $e(this._pt, _, "scaleY", _.scaleY, h ? h * a : a - _.scaleY), A.push("scaleY", d), d += "X";
-          else {
-            if ("transformOrigin" === d) {
-              x = void 0, T = void 0, S = void 0, x = (b = s).split(" "), T = x[0], S = x[1] || "50%", "top" !== T && "bottom" !== T && "left" !== S && "right" !== S || (b = T, T = S, S = b), x[0] = jr[T] || T, x[1] = jr[S] || S, s = x.join(" "), _.svg ? en(t, s, 0, v, 0, this) : ((f = parseFloat(s.split(" ")[2]) || 0) !== _.zOrigin && Nr(this, _, "zOrigin", _.zOrigin, f), Nr(this, k, d, nn(o), nn(s)));
-              continue
+          else if ("undefined" !== l) {
+            if (O && d in O ? (o = "function" == typeof O[d] ? O[d].call(r, n, t, i) : O[d], d in g.units && !Ht(o) && (o += g.units[d]), "=" === (o + "").charAt(1) && (o = Ur(t, d))) : o = Ur(t, d), u = parseFloat(o), (h = "string" === l && "=" === s.charAt(1) ? +(s.charAt(0) + "1") : 0) && (s = s.substr(2)), a = parseFloat(s), d in yr && ("autoAlpha" === d && (1 === u && "hidden" === Ur(t, "visibility") && a && (u = 0), Nr(this, k, "visibility", u ? "inherit" : "hidden", a ? "inherit" : "hidden", !a)), "scale" !== d && "transform" !== d && ~(d = yr[d]).indexOf(",") && (d = d.split(",")[0])), m = d in cr)
+              if (y || ((_ = t._gsap).renderTransform && !e.parseTransform || rn(t, e.parseTransform), v = !1 !== e.smoothOrigin && _.smooth, (y = this._pt = new $e(this._pt, k, Cr, 0, 1, _.renderTransform, _, 0, -1)).dep = 1), "scale" === d) this._pt = new $e(this._pt, _, "scaleY", _.scaleY, h ? h * a : a - _.scaleY), A.push("scaleY", d), d += "X";
+              else {
+                if ("transformOrigin" === d) {
+                  x = void 0, T = void 0, S = void 0, x = (b = s).split(" "), T = x[0], S = x[1] || "50%", "top" !== T && "bottom" !== T && "left" !== S && "right" !== S || (b = T, T = S, S = b), x[0] = jr[T] || T, x[1] = jr[S] || S, s = x.join(" "), _.svg ? en(t, s, 0, v, 0, this) : ((f = parseFloat(s.split(" ")[2]) || 0) !== _.zOrigin && Nr(this, _, "zOrigin", _.zOrigin, f), Nr(this, k, d, nn(o), nn(s)));
+                  continue
+                }
+                if ("svgOrigin" === d) {
+                  en(t, s, 1, v, 0, this);
+                  continue
+                }
+                if (d in $r) {
+                  pn(this, _, d, u, s, h);
+                  continue
+                }
+                if ("smoothOrigin" === d) {
+                  Nr(this, _, "smooth", _.smooth, s);
+                  continue
+                }
+                if ("force3D" === d) {
+                  _[d] = s;
+                  continue
+                }
+                if ("transform" === d) {
+                  fn(this, s, t);
+                  continue
+                }
+              }
+            else d in k || (d = Dr(d) || d);
+            if (m || (a || 0 === a) && (u || 0 === u) && !mr.test(s) && d in k) a || (a = 0), (p = (o + "").substr((u + "").length)) !== (f = Ht(s) || (d in g.units ? g.units[d] : p)) && (u = Vr(t, d, o, f)), this._pt = new $e(this._pt, m ? _ : k, d, u, h ? h * a : a - u, m || "px" !== f && "zIndex" !== d || !1 === e.autoRound ? _r : br), this._pt.u = f || 0, p !== f && (this._pt.b = o, this._pt.r = wr);
+            else if (d in k) Xr.call(this, t, d, o, s);
+            else {
+              if (!(d in t)) {
+                U(d, s);
+                continue
+              }
+              this.add(t, d, t[d], s, n, i)
             }
-            if ("svgOrigin" === d) {
-              en(t, s, 1, v, 0, this);
-              continue
-            }
-            if (d in $r) {
-              pn(this, _, d, u, s, h);
-              continue
-            }
-            if ("smoothOrigin" === d) {
-              Nr(this, _, "smooth", _.smooth, s);
-              continue
-            }
-            if ("force3D" === d) {
-              _[d] = s;
-              continue
-            }
-            if ("transform" === d) {
-              fn(this, s, t);
-              continue
-            }
+            A.push(d)
           }
-        else d in k || (d = Dr(d) || d);
-        if (m || (a || 0 === a) && (u || 0 === u) && !mr.test(s) && d in k) a || (a = 0), (p = (o + "").substr((u + "").length)) !== (f = Ht(s) || (d in g.units ? g.units[d] : p)) && (u = Vr(t, d, o, f)), this._pt = new $e(this._pt, m ? _ : k, d, u, h ? h * a : a - u, m || "px" !== f && "zIndex" !== d || !1 === e.autoRound ? _r : br), this._pt.u = f || 0, p !== f && (this._pt.b = o, this._pt.r = wr);
-        else if (d in k) Xr.call(this, t, d, o, s);
-        else {
-          if (!(d in t)) {
-            U(d, s);
-            continue
-          }
-          this.add(t, d, t[d], s, n, i)
-        }
-        A.push(d)
-      }
       w && Qe(this)
     },
     get: Ur,
@@ -1884,6 +1885,8 @@ if(window.innerWidth >= 992){
   function bn(t, e, r) {
     return e && wn(t.prototype, e), r && wn(t, r), t
   }
+
+
   /*!
    * ScrollTrigger 3.6.0
    * https://greensock.com
@@ -2020,17 +2023,17 @@ if(window.innerWidth >= 992){
     },
     Ii = function (t, e) {
       var r = e && "matrix(1, 0, 0, 1, 0, 0)" !== Bi(t)[Fn] && xn.to(t, {
-          x: 0,
-          y: 0,
-          xPercent: 0,
-          yPercent: 0,
-          rotation: 0,
-          rotationX: 0,
-          rotationY: 0,
-          scale: 1,
-          skewX: 0,
-          skewY: 0
-        }).progress(1),
+        x: 0,
+        y: 0,
+        xPercent: 0,
+        yPercent: 0,
+        rotation: 0,
+        rotationX: 0,
+        rotationY: 0,
+        scale: 1,
+        skewX: 0,
+        skewY: 0
+      }).progress(1),
         n = t.getBoundingClientRect();
       return r && r.progress(0).kill(), n
     },
@@ -2101,8 +2104,8 @@ if(window.innerWidth >= 992){
     },
     Qi = function (t, e, r, n) {
       var i = {
-          display: "block"
-        },
+        display: "block"
+      },
         o = r[n ? "os2" : "p2"],
         s = r[n ? "p2" : "os2"];
       t._isFlipped = n, i[r.a + "Percent"] = n ? -100 : 0, i[r.a] = n ? "1px" : 0, i["border" + o + Mi] = 1, i["border" + s + Mi] = 0, i[r.p] = e + "px", xn.set(t, i)
@@ -2153,8 +2156,8 @@ if(window.innerWidth >= 992){
         var r = ao("refreshInit");
         for (Yn && Oo.sort(), e || co(), In = 0; In < $i.length; In++) $i[In].refresh();
         for (r.forEach((function (t) {
-            return t && t.render && t.render(-1)
-          })), In = $i.length; In--;) $i[In].scroll.rec = 0;
+          return t && t.render && t.render(-1)
+        })), In = $i.length; In--;) $i[In].scroll.rec = 0;
         qn.pause(), ao("refresh")
       } else Yi(Oo, "scrollEnd", so)
     },
@@ -2249,8 +2252,8 @@ if(window.innerWidth >= 992){
     return t.prototype.init = function (e, r) {
       if (this.progress = this.start = 0, this.vars && this.kill(1), ei) {
         var n, i, o, s, a, u, l, c, d, p, f, h, g, m, y, _, v, w, b, x, T, S, A, k, O, E, q, C, L, M, P, R, D, W, B, F, I, z, H, N = (e = Fi(di(e) || fi(e) || e.nodeType ? {
-            trigger: e
-          } : e, Xi)).horizontal ? Di : Wi,
+          trigger: e
+        } : e, Xi)).horizontal ? Di : Wi,
           Y = e,
           V = Y.onUpdate,
           U = Y.toggleClass,
@@ -2316,8 +2319,8 @@ if(window.innerWidth >= 992){
         }(r) : "labelsDirectional" === it.snapTo ? (z = r, function (t, e) {
           var r, n = Hi(z);
           if (n.sort((function (t, e) {
-              return t - e
-            })), e.direction > 0) {
+            return t - e
+          })), e.direction > 0) {
             for (r = 0; r < n.length; r++)
               if (n[r] >= t) return n[r];
             return n.pop()
@@ -2547,7 +2550,8 @@ if(window.innerWidth >= 992){
         var t = this;
         this.height = document.querySelector(this.elmt).clientHeight - window.innerHeight, this.deplacement = _n.quickSetter(this.elmt, "y", "px"), this.addTicker = function () {
           t.playTicker()
-        }, _n.ticker.add(this.addTicker)
+        },
+          _n.ticker.add(this.addTicker)
       }
     }, {
       key: "wheel",
@@ -2582,213 +2586,213 @@ if(window.innerWidth >= 992){
     return !(!("ontouchstart" in window) && !navigator.msMaxTouchPoints)
   }
   var Co, Lo = (function (t) {
-      function e(t) {
-        return (e = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t) {
-          return typeof t
-        } : function (t) {
-          return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
-        })(t)
-      }
+    function e(t) {
+      return (e = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t) {
+        return typeof t
+      } : function (t) {
+        return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+      })(t)
+    }
 
-      function r() {
-        var t = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {};
-        for (var e in this.hooks = {}, this.options = {}, this.defaultOptions) this.options[e] = e in t ? t[e] : this.defaultOptions[e];
-        this.options.autoload && this.load()
+    function r() {
+      var t = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {};
+      for (var e in this.hooks = {}, this.options = {}, this.defaultOptions) this.options[e] = e in t ? t[e] : this.defaultOptions[e];
+      this.options.autoload && this.load()
+    }
+    r.prototype.defaultOptions = {
+      selector: "video[data-yt2html5]",
+      attribute: "data-yt2html5",
+      formats: "*",
+      autoload: !0,
+      withAudio: !1
+    }, r.prototype.globalHooks = {}, r.prototype.getHooks = function (t, e) {
+      var r = [];
+      if (t in this.globalHooks) {
+        var n = this.globalHooks[t];
+        n = (n = n.filter((function (t) {
+          return t.name === e
+        }))).sort((function (t, e) {
+          return t.priority - e.priority
+        })), r = r.concat(n)
       }
-      r.prototype.defaultOptions = {
-        selector: "video[data-yt2html5]",
-        attribute: "data-yt2html5",
-        formats: "*",
-        autoload: !0,
-        withAudio: !1
-      }, r.prototype.globalHooks = {}, r.prototype.getHooks = function (t, e) {
-        var r = [];
-        if (t in this.globalHooks) {
-          var n = this.globalHooks[t];
-          n = (n = n.filter((function (t) {
-            return t.name === e
-          }))).sort((function (t, e) {
-            return t.priority - e.priority
-          })), r = r.concat(n)
-        }
-        if (t in this.hooks) {
-          var i = this.hooks[t];
-          i = (i = i.filter((function (t) {
-            return t.name === e
-          }))).sort((function (t, e) {
-            return t.priority - e.priority
-          })), r = r.concat(i)
-        }
-        return r
-      }, r.prototype.addHook = function (t, e) {
-        t in this.globalHooks || (this.globalHooks[t] = []), t in this.hooks || (this.hooks[t] = []), "global" in e && e.global ? this.globalHooks[t].push(e) : this.hooks[t].push(e)
-      }, r.prototype.addAction = function (t, e) {
-        var r = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : 10,
-          n = !!(3 < arguments.length && void 0 !== arguments[3]) && arguments[3];
-        this.addHook("actions", {
-          name: t,
-          callback: e,
-          priority: r,
-          global: n
-        })
-      }, r.prototype.doAction = function (t) {
-        for (var e = this.getHooks("actions", t), r = arguments.length, n = Array(1 < r ? r - 1 : 0), i = 1; i < r; i++) n[i - 1] = arguments[i];
-        for (var o = 0; o < e.length; o++) {
-          var s;
-          (s = e[o]).callback.apply(s, n)
-        }
-      }, r.prototype.addFilter = function (t, e) {
-        var r = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : 10,
-          n = !!(3 < arguments.length && void 0 !== arguments[3]) && arguments[3];
-        this.addHook("filters", {
-          name: t,
-          callback: e,
-          priority: r,
-          global: n
-        })
-      }, r.prototype.applyFilters = function (t, e) {
-        for (var r = this.getHooks("filters", t), n = arguments.length, i = Array(2 < n ? n - 2 : 0), o = 2; o < n; o++) i[o - 2] = arguments[o];
-        for (var s = 0; s < r.length; s++) {
-          var a;
-          e = (a = r[s]).callback.apply(a, [e].concat(i))
-        }
-        return e
-      }, r.prototype.itagMap = {
-        18: "360p",
-        22: "720p",
-        37: "1080p",
-        38: "3072p",
-        82: "360p3d",
-        83: "480p3d",
-        84: "720p3d",
-        85: "1080p3d",
-        133: "240pna",
-        134: "360pna",
-        135: "480pna",
-        136: "720pna",
-        137: "1080pna",
-        264: "1440pna",
-        298: "720p60",
-        299: "1080p60na",
-        160: "144pna",
-        139: "48kbps",
-        140: "128kbps",
-        141: "256kbps"
-      }, r.prototype.urlToId = function (t) {
-        var e = t.match(/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|(?:(?:youtube-nocookie\.com\/|youtube\.com\/)(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/)))([a-zA-Z0-9\-_]*)/);
-        return Array.isArray(e) && e[1] ? e[1] : t
-      }, r.prototype.fetch = function (t) {
-        return new Promise((function (e, r) {
-          var n = new XMLHttpRequest;
-          n.open("GET", t, !0), n.onreadystatechange = function () {
-            4 === this.readyState && (200 <= this.status && 400 > this.status ? e(this.responseText) : r(this))
-          }, n.send(), n = null
-        }))
-      }, r.prototype.getAllowedFormats = function () {
-        var t = [];
-        return Array.isArray(this.options.formats) ? t = this.options.formats : this.itagMap[this.options.formats] ? t = [this.options.formats] : "*" === this.options.formats && (t = Object.values(this.itagMap).sort()), t
-      }, r.prototype.getElements = function (t) {
-        var r = null;
-        return t && (r = NodeList.prototype.isPrototypeOf(t) || HTMLCollection.prototype.isPrototypeOf(t) ? t : "object" === e(t) && "nodeType" in t && t.nodeType ? [t] : document.querySelectorAll(this.options.selector)), r = Array.from(r || ""), this.applyFilters("elements", r)
-      }, r.prototype.youtubeDataApiEndpoint = function (t) {
-        var e = "https://yt2html5.com/?id=".concat(t);
-        return this.applyFilters("api.endpoint", e, t, null)
-      }, r.prototype.parseUriString = function (t) {
-        return t.split("&").reduce((function (t, e) {
-          var r = e.split("=").map((function (t) {
-            return decodeURIComponent(t.replace("+", " "))
-          }));
-          return t[r[0]] = r[1], t
-        }), {})
-      }, r.prototype.canPlayType = function (t) {
-        var e = null,
-          r = (e = /^audio/i.test(t) ? document.createElement("audio") : document.createElement("video")) && "function" == typeof e.canPlayType ? e.canPlayType(t) : "unknown";
-        return r || "no"
-      }, r.prototype.parseYoutubeMeta = function (t) {
-        var e = this,
-          r = [],
-          n = [];
-        if ("string" == typeof t) try {
-          t = JSON.parse(t)
-        } catch (t) {
-          return null
-        }
-        var i = t.data || {};
-        return (i = this.applyFilters("api.response", i, t)).hasOwnProperty("url_encoded_fmt_stream_map") && (r = r.concat(i.url_encoded_fmt_stream_map.split(",").map((function (t) {
-          return e.parseUriString(t)
-        })))), i.player_response.streamingData && i.player_response.streamingData.formats && (r = r.concat(i.player_response.streamingData.formats)), i.hasOwnProperty("adaptive_fmts") && (r = r.concat(i.adaptive_fmts.split(",").map((function (t) {
-          return e.parseUriString(t)
-        })))), i.player_response.streamingData && i.player_response.streamingData.adaptiveFormats && (r = r.concat(i.player_response.streamingData.adaptiveFormats)), r.forEach((function (t) {
-          if (t && "itag" in t && e.itagMap[t.itag]) {
-            var r = {
-              _raw: t,
-              itag: t.itag,
-              url: null,
-              label: null,
-              type: "unknown",
-              mime: "unknown",
-              hasAudio: !1,
-              browserSupport: "unknown"
-            };
-            if ("url" in t && t.url && (r.url = t.url), "audioQuality" in t && t.audioQuality && (r.hasAudio = !0), r.label = "qualityLabel" in t && t.qualityLabel ? t.qualityLabel : e.itagMap[t.itag], "mimeType" in t) {
-              var i = t.mimeType.match(/^(audio|video)(?:\/([^;]+);)?/i);
-              i[1] && (r.type = i[1]), i[2] && (r.mime = i[2]), r.browserSupport = e.canPlayType("".concat(r.type, "/").concat(r.mime))
-            }
-            r.url && n.push(r)
+      if (t in this.hooks) {
+        var i = this.hooks[t];
+        i = (i = i.filter((function (t) {
+          return t.name === e
+        }))).sort((function (t, e) {
+          return t.priority - e.priority
+        })), r = r.concat(i)
+      }
+      return r
+    }, r.prototype.addHook = function (t, e) {
+      t in this.globalHooks || (this.globalHooks[t] = []), t in this.hooks || (this.hooks[t] = []), "global" in e && e.global ? this.globalHooks[t].push(e) : this.hooks[t].push(e)
+    }, r.prototype.addAction = function (t, e) {
+      var r = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : 10,
+        n = !!(3 < arguments.length && void 0 !== arguments[3]) && arguments[3];
+      this.addHook("actions", {
+        name: t,
+        callback: e,
+        priority: r,
+        global: n
+      })
+    }, r.prototype.doAction = function (t) {
+      for (var e = this.getHooks("actions", t), r = arguments.length, n = Array(1 < r ? r - 1 : 0), i = 1; i < r; i++) n[i - 1] = arguments[i];
+      for (var o = 0; o < e.length; o++) {
+        var s;
+        (s = e[o]).callback.apply(s, n)
+      }
+    }, r.prototype.addFilter = function (t, e) {
+      var r = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : 10,
+        n = !!(3 < arguments.length && void 0 !== arguments[3]) && arguments[3];
+      this.addHook("filters", {
+        name: t,
+        callback: e,
+        priority: r,
+        global: n
+      })
+    }, r.prototype.applyFilters = function (t, e) {
+      for (var r = this.getHooks("filters", t), n = arguments.length, i = Array(2 < n ? n - 2 : 0), o = 2; o < n; o++) i[o - 2] = arguments[o];
+      for (var s = 0; s < r.length; s++) {
+        var a;
+        e = (a = r[s]).callback.apply(a, [e].concat(i))
+      }
+      return e
+    }, r.prototype.itagMap = {
+      18: "360p",
+      22: "720p",
+      37: "1080p",
+      38: "3072p",
+      82: "360p3d",
+      83: "480p3d",
+      84: "720p3d",
+      85: "1080p3d",
+      133: "240pna",
+      134: "360pna",
+      135: "480pna",
+      136: "720pna",
+      137: "1080pna",
+      264: "1440pna",
+      298: "720p60",
+      299: "1080p60na",
+      160: "144pna",
+      139: "48kbps",
+      140: "128kbps",
+      141: "256kbps"
+    }, r.prototype.urlToId = function (t) {
+      var e = t.match(/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|(?:(?:youtube-nocookie\.com\/|youtube\.com\/)(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/)))([a-zA-Z0-9\-_]*)/);
+      return Array.isArray(e) && e[1] ? e[1] : t
+    }, r.prototype.fetch = function (t) {
+      return new Promise((function (e, r) {
+        var n = new XMLHttpRequest;
+        n.open("GET", t, !0), n.onreadystatechange = function () {
+          4 === this.readyState && (200 <= this.status && 400 > this.status ? e(this.responseText) : r(this))
+        }, n.send(), n = null
+      }))
+    }, r.prototype.getAllowedFormats = function () {
+      var t = [];
+      return Array.isArray(this.options.formats) ? t = this.options.formats : this.itagMap[this.options.formats] ? t = [this.options.formats] : "*" === this.options.formats && (t = Object.values(this.itagMap).sort()), t
+    }, r.prototype.getElements = function (t) {
+      var r = null;
+      return t && (r = NodeList.prototype.isPrototypeOf(t) || HTMLCollection.prototype.isPrototypeOf(t) ? t : "object" === e(t) && "nodeType" in t && t.nodeType ? [t] : document.querySelectorAll(this.options.selector)), r = Array.from(r || ""), this.applyFilters("elements", r)
+    }, r.prototype.youtubeDataApiEndpoint = function (t) {
+      var e = "https://yt2html5.com/?id=".concat(t);
+      return this.applyFilters("api.endpoint", e, t, null)
+    }, r.prototype.parseUriString = function (t) {
+      return t.split("&").reduce((function (t, e) {
+        var r = e.split("=").map((function (t) {
+          return decodeURIComponent(t.replace("+", " "))
+        }));
+        return t[r[0]] = r[1], t
+      }), {})
+    }, r.prototype.canPlayType = function (t) {
+      var e = null,
+        r = (e = /^audio/i.test(t) ? document.createElement("audio") : document.createElement("video")) && "function" == typeof e.canPlayType ? e.canPlayType(t) : "unknown";
+      return r || "no"
+    }, r.prototype.parseYoutubeMeta = function (t) {
+      var e = this,
+        r = [],
+        n = [];
+      if ("string" == typeof t) try {
+        t = JSON.parse(t)
+      } catch (t) {
+        return null
+      }
+      var i = t.data || {};
+      return (i = this.applyFilters("api.response", i, t)).hasOwnProperty("url_encoded_fmt_stream_map") && (r = r.concat(i.url_encoded_fmt_stream_map.split(",").map((function (t) {
+        return e.parseUriString(t)
+      })))), i.player_response.streamingData && i.player_response.streamingData.formats && (r = r.concat(i.player_response.streamingData.formats)), i.hasOwnProperty("adaptive_fmts") && (r = r.concat(i.adaptive_fmts.split(",").map((function (t) {
+        return e.parseUriString(t)
+      })))), i.player_response.streamingData && i.player_response.streamingData.adaptiveFormats && (r = r.concat(i.player_response.streamingData.adaptiveFormats)), r.forEach((function (t) {
+        if (t && "itag" in t && e.itagMap[t.itag]) {
+          var r = {
+            _raw: t,
+            itag: t.itag,
+            url: null,
+            label: null,
+            type: "unknown",
+            mime: "unknown",
+            hasAudio: !1,
+            browserSupport: "unknown"
+          };
+          if ("url" in t && t.url && (r.url = t.url), "audioQuality" in t && t.audioQuality && (r.hasAudio = !0), r.label = "qualityLabel" in t && t.qualityLabel ? t.qualityLabel : e.itagMap[t.itag], "mimeType" in t) {
+            var i = t.mimeType.match(/^(audio|video)(?:\/([^;]+);)?/i);
+            i[1] && (r.type = i[1]), i[2] && (r.mime = i[2]), r.browserSupport = e.canPlayType("".concat(r.type, "/").concat(r.mime))
           }
-        })), n = this.applyFilters("api.results", n, i)
-      }, r.prototype.load = function () {
-        var t = this,
-          e = this.getElements(this.options.selector);
-        e && e.length && e.forEach((function (e) {
-          t.loadSingle(e)
-        }))
-      }, r.prototype.loadSingle = function (t) {
-        var e = this,
-          r = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : null,
-          n = r || this.options.attribute;
-        if (t.getAttribute(n)) {
-          var i = this.urlToId(t.getAttribute(n)),
-            o = this.youtubeDataApiEndpoint(i);
-          this.doAction("api.before", t), this.fetch(o).then((function (r) {
-            if (r) {
-              var n = e.parseYoutubeMeta(r);
-              if (n && Array.isArray(n)) {
-                (n = n.filter((function (e) {
-                  return e.type === t.tagName.toLowerCase()
-                }))).sort((function (t, e) {
-                  var r = {
-                    unknown: -1,
-                    no: -1,
-                    maybe: 0,
-                    probably: 1
-                  };
-                  return r[t.browserSupport] + r[e.browserSupport]
-                })), e.options.withAudio && (n = n.filter((function (t) {
-                  return t.hasAudio
-                })));
-                for (var o = e.getAllowedFormats(), s = null, a = null, u = function (t) {
-                    var r = o[t],
-                      i = n.filter((function (t) {
-                        return e.itagMap[t.itag] === r
-                      }));
-                    if (i && i.length) return s = i.shift(), a = r, "break"
-                  }, l = 0; l < o.length && "break" !== u(l); l++);
-                var c = {
-                  src: "",
-                  type: ""
-                };
-                (s = e.applyFilters("video.stream", s, t, a, n)) && "url" in s && s.url && (c.src = s.url), s.type && "unknown" !== s.type && s.mime && "unknown" !== s.mime && (c.type = "".concat(s.type, "/").concat(s.mime)), c.src = e.applyFilters("video.source", c.src, s, t, a, n), c.src && "function" == typeof c.src.toString && c.src.toString().length ? (t.src = c.src, c.type && c.type.length && (t.type = c.type)) : console.warn("YouTubeToHtml5 unable to load video for ID: ".concat(i))
-              }
-            }
-          })).finally((function (r) {
-            e.doAction("api.after", t, r)
-          }))
+          r.url && n.push(r)
         }
-      }, "object" === e(t) && "object" === e(t.exports) && (t.exports = r)
-    }(Co = {
-      exports: {}
-    }, Co.exports), Co.exports),
+      })), n = this.applyFilters("api.results", n, i)
+    }, r.prototype.load = function () {
+      var t = this,
+        e = this.getElements(this.options.selector);
+      e && e.length && e.forEach((function (e) {
+        t.loadSingle(e)
+      }))
+    }, r.prototype.loadSingle = function (t) {
+      var e = this,
+        r = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : null,
+        n = r || this.options.attribute;
+      if (t.getAttribute(n)) {
+        var i = this.urlToId(t.getAttribute(n)),
+          o = this.youtubeDataApiEndpoint(i);
+        this.doAction("api.before", t), this.fetch(o).then((function (r) {
+          if (r) {
+            var n = e.parseYoutubeMeta(r);
+            if (n && Array.isArray(n)) {
+              (n = n.filter((function (e) {
+                return e.type === t.tagName.toLowerCase()
+              }))).sort((function (t, e) {
+                var r = {
+                  unknown: -1,
+                  no: -1,
+                  maybe: 0,
+                  probably: 1
+                };
+                return r[t.browserSupport] + r[e.browserSupport]
+              })), e.options.withAudio && (n = n.filter((function (t) {
+                return t.hasAudio
+              })));
+              for (var o = e.getAllowedFormats(), s = null, a = null, u = function (t) {
+                var r = o[t],
+                  i = n.filter((function (t) {
+                    return e.itagMap[t.itag] === r
+                  }));
+                if (i && i.length) return s = i.shift(), a = r, "break"
+              }, l = 0; l < o.length && "break" !== u(l); l++);
+              var c = {
+                src: "",
+                type: ""
+              };
+              (s = e.applyFilters("video.stream", s, t, a, n)) && "url" in s && s.url && (c.src = s.url), s.type && "unknown" !== s.type && s.mime && "unknown" !== s.mime && (c.type = "".concat(s.type, "/").concat(s.mime)), c.src = e.applyFilters("video.source", c.src, s, t, a, n), c.src && "function" == typeof c.src.toString && c.src.toString().length ? (t.src = c.src, c.type && c.type.length && (t.type = c.type)) : console.warn("YouTubeToHtml5 unable to load video for ID: ".concat(i))
+            }
+          }
+        })).finally((function (r) {
+          e.doAction("api.after", t, r)
+        }))
+      }
+    }, "object" === e(t) && "object" === e(t.exports) && (t.exports = r)
+  }(Co = {
+    exports: {}
+  }, Co.exports), Co.exports),
     Mo = function () {
       function t(e, r) {
         vn(this, t), this.elmt = e, this.cible = r, this.leRaf, this.i = 0, this.avg = 0, this.progress = {}, this.progress.vol = 0
@@ -2904,26 +2908,92 @@ if(window.innerWidth >= 992){
     qo() ? (window.innerWidth > window.innerHeight && Fo && document.location.reload(), window.innerWidth < window.innerHeight && (Fo = !0)) : (Bo = window.innerHeight, Oo.getAll().forEach((function (t) {
       t.kill()
     })))
-  })), Oo.addEventListener("refreshInit", (function () {})), Oo.addEventListener("refresh", (function () {}));
+  })), Oo.addEventListener("refreshInit", (function () { })), Oo.addEventListener("refresh", (function () { }));
   var Io, zo, Ho, No = new Mo(document.querySelector(".son1"), document.querySelector(".toSon1")),
     Yo = new Mo(document.querySelector(".son2"), document.querySelector(".toSon2")),
     Vo = new Mo(document.querySelector(".son3"), document.querySelector(".toSon3")),
     Uo = new Mo(document.querySelector(".son4"), document.querySelector(".toSon4"));
 
   function Xo() {
-   
+    Oo.create({
+      trigger: ".SIntro",
+      start: "top top",
+      end: "+=" + 4.5 * window.innerHeight + "px",
+      pin: !0
+    });
+    var t = [];
+    document.querySelectorAll(".mot1 span").forEach((function (e) {
+      return t.push(e)
+    })), t.reverse();
+    var e = [];
+    document.querySelectorAll(".mot2 span").forEach((function (t) {
+      return e.push(t)
+    })), e.reverse();
+    var r = 0;
+    t.forEach((function (t) {
+      _n.to(t, {
+        scrollTrigger: {
+          trigger: ".innerSIntro",
+          start: "top 0%",
+          end: "top -" + 1.2 * window.innerHeight + "-=" + r,
+          scrub: !0
+        },
+        y: "-250%",
+        ease: "none"
+      }), r += .48 * window.innerHeight
+    }));
     var n = 0;
-   Oo.create({
+    e.forEach((function (t) {
+      _n.to(t, {
+        scrollTrigger: {
+          trigger: ".innerSIntro",
+          start: "top 0%",
+          end: "top -" + 1.2 * window.innerHeight + "-=" + n,
+          scrub: !0
+        },
+        y: "-250%",
+        ease: "none"
+      }), n += .48 * window.innerHeight
+    })), _n.fromTo(".intro", {
+      x: .375 * window.innerWidth + "px",
+      y: -.35 * Bo + "px"
+    }, {
+      scrollTrigger: {
+        id: "finaltest",
+        trigger: ".innerSIntro",
+        start: "top 0%",
+        end: "+=" + 4.5 * window.innerHeight + "px",
+        scrub: !0,
+        onLeave: function () {
+          document.querySelector(".nom").classList.add("visible")
+        },
+        onEnterBack: function () {
+          document.querySelector(".nom").classList.remove("visible")
+        }
+      },
+      scale: 1,
+      x: "0px",
+      y: "0px",
+      ease: "none"
+    }), _n.to(".intro img", {
+      scrollTrigger: {
+        trigger: ".innerSIntro",
+        start: "top 0%",
+        end: "+=" + 4.5 * window.innerHeight + "px",
+        scrub: !0
+      },
+      scale: 1
+    }), Oo.create({
       trigger: ".biographie",
       start: "top top",
-          end: "bottom bottom",
+      end: "+=" + 2 * window.innerHeight + "px",
       pin: !0,
       pinSpacing: !1
     }), _n.to(".biographie div", {
       scrollTrigger: {
         trigger: ".cita-a",
-        start: "top top",
-        end: "bottom bottom",
+        start: "top top+=" + 2 * window.innerHeight + "px",
+        end: "+=" + window.innerHeight + "px",
         scrub: !0
       },
       opacity: 0,
@@ -2989,8 +3059,17 @@ if(window.innerWidth >= 992){
         ease: "none"
       })
     }));
-
-     _n.to(".mot2", {
+    var i = document.querySelector(".SReal").getBoundingClientRect().left + Bo;
+    _n.to(".SReal", {
+      scrollTrigger: {
+        trigger: ".innerSlider",
+        start: "top bottom-=" + i,
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "100%",
+      ease: "none"
+    }), _n.to(".mot2", {
       scrollTrigger: {
         trigger: ".innerSlider",
         start: "top bottom-=" + (i - window.innerWidth),
@@ -3008,6 +3087,17 @@ if(window.innerWidth >= 992){
       },
       x: "-10%",
       ease: "none"
+    }), _n.fromTo(".SReal2 .mask", {
+      x: "-100%"
+    }, {
+      scrollTrigger: {
+        trigger: ".innerSlider",
+        start: "top bottom-=" + i,
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "0%",
+      ease: "none"
     }), document.querySelectorAll(".grosTitre span").forEach((function (t) {
       var e = t.getBoundingClientRect().left - window.innerWidth;
       _n.to(t, {
@@ -3019,12 +3109,21 @@ if(window.innerWidth >= 992){
         },
         y: 0
       })
-    })),  _n.set(".debut", {
+    })), _n.to(".innerSlider", {
+      scrollTrigger: {
+        trigger: ".innerSlider",
+        end: "+=" + (document.querySelector(".innerSlider").offsetWidth - window.innerWidth),
+        scrub: !0,
+        pin: !0
+      },
+      x: -document.querySelector(".innerSlider").offsetWidth + window.innerWidth + "px",
+      ease: "none"
+    }), _n.set(".debut", {
       opacity: 0
     }), _n.to(".debut", {
       scrollTrigger: {
         trigger: ".innerCita2",
-        start: "top 0%",
+        start: "top 50%",
         end: "top top",
         scrub: !0
       },
@@ -3034,54 +3133,18 @@ if(window.innerWidth >= 992){
       scrollTrigger: {
         trigger: ".innerCita2",
         start: "bottom bottom",
-        end: "bottom 0%",
+        end: "bottom 50%",
         scrub: !0
       },
       opacity: 0,
       ease: "none",
       immediateRender: !1
-    });
-    if(window.innerWidth >= 1400){
-    Oo.create({
+    }), Oo.create({
       trigger: ".SConcert",
-      start: "top 70%",
-      end: "bottom top",
+      start: "top bottom",
+      end: "bottom 100%",
       pin: ".debut"
-    });
-  }
-  else if (window.innerWidth >= 1200){
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 80%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-  else if (window.innerWidth >= 992){
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 90%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-  else if (window.innerWidth >= 768){
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 100%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-  else{
-    Oo.create({
-      trigger: ".SConcert",
-      start: "top 100%",
-      end: "bottom top",
-      pin: ".debut"
-    });
-  }
-    document.querySelectorAll(".citaD").forEach((function (t) {
+    }), document.querySelectorAll(".citaD").forEach((function (t) {
       Oo.create({
         trigger: t,
         start: "top 50%",
@@ -3089,117 +3152,44 @@ if(window.innerWidth >= 992){
         onEnter: function () {
           if (t.classList.contains("citaDSpe")) {
             var e = t.getAttribute("data-cit");
-            document.querySelectorAll(".verb > div")[e].classList.contains("actif") || (document.querySelectorAll(".verb > div")[e].classList.add("actif"), document.querySelectorAll(".verb > div").forEach((function (t) {
-              t != document.querySelectorAll(".verb > div")[e] && t.classList.remove("actif")
-            })), _n.killTweensOf(".verb div"),
-             _n.to(".verb div ul", {
+            document.querySelectorAll(".verb > span")[e].classList.contains("actif") || (document.querySelectorAll(".verb > span")[e].classList.add("actif"), document.querySelectorAll(".verb > span").forEach((function (t) {
+              t != document.querySelectorAll(".verb > span")[e] && t.classList.remove("actif")
+            })), _n.killTweensOf(".verb span"), _n.to(".verb span span", {
               opacity: 0,
-              x: "-40%",
+              y: "-40%",
               duration: .2,
               ease: "power2.in"
-            }), 
-
-            _n.fromTo(".verb .actif ul", {
-              x: "40%"
+            }), _n.fromTo(".verb span.actif span", {
+              y: "40%"
             }, {
               opacity: 1,
               duration: .2,
-              x: "0%",
+              y: "0%",
               delay: .2,
               stagger: .05,
               ease: "power2.out"
-            }),
-                     _n.to(".verb div h3", {
-              opacity: 0,
-              x: "-40%",
-              duration: .2,
-              ease: "power2.in"
-            }), 
-            
-            _n.fromTo(".verb .actif h3", {
-              x: "40%"
-            }, {
-              opacity: 1,
-              duration: .2,
-             x: "0%",
-              delay: .2,
-              stagger: .05,
-              ease: "power2.out"
-            }),
-            _n.to(".verb div span", {
-              opacity: 0,
-              x: "-40%",
-              duration: .2,
-              ease: "power2.in"
-            }), 
-            
-            _n.fromTo(".verb .actif span", {
-              x: "40%"
-            }, {
-              opacity: 1,
-              duration: .2,
-              x: "0%",
-              delay: .2,
-              stagger: .05,
-              ease: "power2.out"
-            })
-            )
+            }))
           }
         },
         onEnterBack: function () {
           var e = t.getAttribute("data-cit");
-          document.querySelectorAll(".verb > div")[e].classList.contains("actif") || (document.querySelectorAll(".verb > div")[e].classList.add("actif"), document.querySelectorAll(".verb > div").forEach((function (t) {
-            t != document.querySelectorAll(".verb > div")[e] && t.classList.remove("actif")
-          })), _n.killTweensOf(".verb div"),
-           _n.to(".verb div ul", {
+          document.querySelectorAll(".verb > span")[e].classList.contains("actif") || (document.querySelectorAll(".verb > span")[e].classList.add("actif"), document.querySelectorAll(".verb > span").forEach((function (t) {
+            t != document.querySelectorAll(".verb > span")[e] && t.classList.remove("actif")
+          })), _n.killTweensOf(".verb span"), _n.to(".verb span span", {
             opacity: 0,
-            x: "-40%",
+            y: "-40%",
             duration: .2,
             ease: "power2.in"
-          }),
-           _n.fromTo(".verb .actif ul", {
-            x: "40%"
+          }), _n.fromTo(".verb span.actif span", {
+            y: "40%"
           }, {
             opacity: 1,
             duration: .2,
-            x: "0%",
+            y: "0%",
             delay: .2,
             stagger: .05,
             ease: "power2.out"
-          }),
-          _n.to(".verb div h3", {
-            opacity: 0,
-            x: "-40%",
-            duration: .2,
-            ease: "power2.in"
-          }),
-           _n.fromTo(".verb .actif h3", {
-            x: "40%"
-          }, {
-            opacity: 1,
-            duration: .2,
-            x: "0%",
-            delay: .2,
-            stagger: .05,
-            ease: "power2.out"
-          }),
-          _n.to(".verb div span", {
-            opacity: 0,
-            x: "-40%",
-            duration: .2,
-            ease: "power2.in"
-          }),
-           _n.fromTo(".verb .actif span", {
-            x: "40%"
-          }, {
-            opacity: 1,
-            duration: .2,
-            x: "0%",
-            delay: .2,
-            stagger: .05,
-            ease: "power2.out"
-          })
-          )
+          }))
         }
       })
     })), _n.to(".truth .mot", {
@@ -3225,7 +3215,133 @@ if(window.innerWidth >= 992){
         ease: "none"
       })
     }));
-document.querySelectorAll(".lien span").forEach((function (t) {
+
+    var o = window.innerHeight - document.querySelector(".innerImg").offsetHeight - .15 * window.innerWidth;
+    Oo.create({
+      trigger: ".liste",
+      start: "top 0%",
+      end: "bottom bottom-=" + o + "px",
+      pin: ".innerImg"
+    }), _n.to(".innerImg img", {
+      scrollTrigger: {
+        trigger: ".liste",
+        start: "top 0%",
+        end: "bottom bottom-=" + o + "px",
+        scrub: !0
+      },
+      scale: 1,
+      ease: "none"
+    }), _n.to("#intermission", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "100vw",
+      ease: "none"
+    });
+    var s = window.innerWidth + Bo;
+    _n.to(".notes", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top bottom",
+        end: "+=" + s + "px",
+        scrub: !0
+      },
+      scale: 1.2,
+      ease: "none"
+    }), _n.to(".notes", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top-=" + window.innerWidth + "px",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      x: "30%",
+      ease: "none",
+      immediateRender: !1
+    }), _n.to(".continue", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      opacity: 0,
+      ease: "none"
+    }), _n.to(".inner_inter .phrase, .inner_inter .inter", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        start: "top top-=" + window.innerWidth + "px",
+        end: "+=" + window.innerWidth + "px",
+        scrub: !0
+      },
+      opacity: 0,
+      ease: "none"
+    }), Oo.create({
+      trigger: ".SRecording",
+      start: "top bottom",
+      end: "+=" + (Bo + 2 * window.innerWidth) + "px",
+      onEnter: function () {
+        _n.killTweensOf(".uneNote"), _n.fromTo(".uneNote", {
+          y: "-150%",
+          opacity: 0
+        }, {
+          y: "0%",
+          opacity: 1,
+          stagger: -.1,
+          duration: 1.1,
+          delay: .5,
+          ease: "elastic.out"
+        })
+      },
+      onEnterBack: function () {
+        _n.killTweensOf(".uneNote"), _n.fromTo(".uneNote", {
+          y: "-150%",
+          opacity: 0
+        }, {
+          y: "0%",
+          opacity: 1,
+          stagger: -.1,
+          duration: 1.2,
+          ease: "elastic.out"
+        })
+      },
+      onLeave: function () {
+        1 == window.quuneFois && (No.mute(), Yo.mute(), Vo.mute(), Uo.mute(), document.querySelectorAll(".uneNote").forEach((function (t) {
+          t.classList.remove("actif")
+        })))
+      },
+      onLeaveBack: function () {
+        1 == window.quuneFois && (No.mute(), Yo.mute(), Vo.mute(), Uo.mute(), document.querySelectorAll(".uneNote").forEach((function (t) {
+          t.classList.remove("actif")
+        })))
+      }
+    }), document.querySelectorAll(".SRecording .lArt").forEach((function (t) {
+      var e = t.getBoundingClientRect().left + Bo - .8 * window.innerWidth;
+      _n.fromTo(t.querySelector("span"), {
+        x: "-100%"
+      }, {
+        scrollTrigger: {
+          trigger: ".contenu__inner",
+          start: "top bottom-=" + e,
+          end: "+=" + t.offsetWidth,
+          scrub: !0
+        },
+        x: "0%",
+        ease: "none"
+      })
+    })), _n.to(".contenu__inner", {
+      scrollTrigger: {
+        trigger: ".contenu__inner",
+        end: "+=" + (document.querySelector(".contenu__inner").offsetWidth - window.innerWidth),
+        scrub: !0,
+        pin: !0
+      },
+      x: -document.querySelector(".contenu__inner").clientWidth + window.innerWidth + "px",
+      ease: "none"
+    }), document.querySelectorAll(".lien span").forEach((function (t) {
       _n.to(t, {
         scrollTrigger: {
           trigger: ".STitular",
@@ -3236,7 +3352,25 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         x: 0,
         ease: "none"
       })
-    })),  _n.fromTo(".div1", {
+    })), document.querySelector(".social").classList.remove("bl"), _n.set(".social", {
+      backgroundColor: "#000"
+    }), _n.to(".social", {
+      scrollTrigger: {
+        trigger: ".STitular",
+        start: "top top+=" + (window.innerHeight + window.innerWidth) + "px",
+        end: "+=" + window.innerWidth,
+        scrub: !0,
+        onLeave: function () {
+          document.querySelector(".social").classList.add("bl")
+        },
+        onEnterBack: function () {
+          document.querySelector(".social").classList.remove("bl")
+        }
+      },
+      x: "100%",
+      ease: "none",
+      immediateRender: !1
+    }), _n.fromTo(".div1", {
       y: "250%"
     }, {
       scrollTrigger: {
@@ -3436,8 +3570,36 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scrub: !0
       },
       scale: .2
-    }), 
-    _n.to(".animO", {
+    }), Oo.create({
+      trigger: ".SProfessor",
+      start: "top top",
+      end: "+=" + 2 * Bo + "px",
+      pin: !0,
+      onLeave: function () {
+        document.querySelector(".SProfessor h2").classList.add("actif")
+      },
+      onEnterBack: function () {
+        document.querySelector(".SProfessor h2").classList.remove("actif")
+      }
+    }), _n.to(".portrait", {
+      scrollTrigger: {
+        trigger: ".SProfessor",
+        start: "top bottom",
+        end: "+=" + 3 * Bo + "px",
+        scrub: !0
+      },
+      scale: .265,
+      ease: "none"
+    }), _n.to(".portrait img", {
+      scrollTrigger: {
+        trigger: ".SProfessor",
+        start: "top bottom",
+        end: "+=" + 3 * Bo + "px",
+        scrub: !0
+      },
+      scale: 1,
+      ease: "none"
+    }), _n.to(".animO", {
       scrollTrigger: {
         trigger: ".SProfessor",
         start: "top bottom",
@@ -3446,8 +3608,31 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       },
       y: "0%",
       ease: "none"
+    }), document.querySelectorAll(".SStudent .lArt").forEach((function (t) {
+      var e = t.getBoundingClientRect().left + Bo - .8 * window.innerWidth;
+      _n.fromTo(t.querySelector("span"), {
+        x: "-100%"
+      }, {
+        scrollTrigger: {
+          trigger: ".scrollHori2",
+          start: "top bottom-=" + e,
+          end: "+=" + t.offsetWidth,
+          scrub: !0
+        },
+        x: "0%",
+        ease: "none"
+      })
+    })), _n.to(".scrollHori2", {
+      scrollTrigger: {
+        trigger: ".scrollHori2",
+        end: "+=" + (document.querySelector(".scrollHori2").offsetWidth - window.innerWidth),
+        pin: !0,
+        scrub: !0
+      },
+      x: -document.querySelector(".scrollHori2").clientWidth + window.innerWidth + "px",
+      ease: "none"
     });
-   
+    var a = Bo + document.querySelector(".alumnis .listeNom").offsetWidth + 3 * window.innerWidth;
     _n.fromTo(".fullImg img", {
       x: "-95%"
     }, {
@@ -3477,6 +3662,46 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scrub: !0
       },
       x: "-20%",
+      ease: "none"
+    }), _n.to(".rond", {
+      scrollTrigger: {
+        trigger: ".SAuthor",
+        start: "top top+=" + (Bo + window.innerWidth),
+        end: "+=" + window.innerWidth,
+        scrub: !0,
+        onUpdate: function (t) {
+          0 != _n.getProperty(".rond", "scale") && _n.set(".rond img", {
+            scale: 1 / _n.getProperty(".rond", "scale")
+          })
+        }
+      },
+      x: window.innerWidth + "px",
+      scale: 1,
+      ease: "none"
+    }), _n.to(".innerRond", {
+      scrollTrigger: {
+        trigger: ".SAuthor",
+        start: "top top+=" + Bo + "px",
+        end: "+=" + Bo + "px",
+        scrub: !0,
+        onEnter: function () {
+          document.querySelector(".rond").classList.add("visible")
+        },
+        onLeaveBack: function () {
+          document.querySelector(".rond").classList.remove("visible")
+        }
+      },
+      y: Bo + "px",
+      opacity: 0,
+      ease: "none"
+    }), _n.to(".rond img", {
+      scrollTrigger: {
+        trigger: ".SAuthor",
+        start: "top top+=" + (Bo + window.innerWidth),
+        end: "+=" + (window.innerWidth + Bo) + "px",
+        scrub: !0
+      },
+      rotation: -120,
       ease: "none"
     });
     var u = window.innerWidth;
@@ -3516,6 +3741,22 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       ease: "none"
     }), _n.set(".zoom", {
       opacity: 1
+    }), _n.to(".innerImgZ img", {
+      scrollTrigger: {
+        trigger: ".innerImgZ",
+        start: "top 100%",
+        end: "top bottom",
+        endTrigger: ".finAuthor",
+        scrub: !0,
+        onUpdate: function (t) {
+          t.progress > .5 && _n.set(".zoom", {
+            opacity: _n.utils.mapRange(.5, 1, 1, .15, t.progress),
+            blur: _n.utils.mapRange(.5, 1, 0, 20, t.progress)
+          })
+        }
+      },
+      scale: .9,
+      ease: "none"
     }), Oo.create({
       trigger: ".people",
       start: "top top",
@@ -3526,18 +3767,14 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         })
       }
     });
-    var l = document.querySelector(".SContact").offsetHeight;
+    var l = document.querySelector(".SContact").offsetHeight + document.querySelector(".finAuthor").offsetHeight;
     Oo.create({
       trigger: ".innerImgZ",
       start: "top top",
       end: "+=" + l + Bo + "px",
       pin: !0,
       pinSpacing: !1
-    }),
-
-     qo() || (
-      
-      document.querySelectorAll(".people span,.people div, .people .mot").forEach((function (t) {
+    }), qo() || (document.querySelectorAll(".people span").forEach((function (t) {
       var e = t.getBoundingClientRect().left - 1.25 * window.innerWidth;
       _n.to(t, {
         scrollTrigger: {
@@ -3550,22 +3787,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         scale: 1,
         ease: "elastic.inOut"
       })
-    })),
-    document.querySelectorAll(".horizontal-text-anim-itemretion .mot").forEach((function (t) {
-      var e = t.getBoundingClientRect().left - 1.25 * window.innerWidth;
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".people",
-          start: "top top-=" + e,
-          end: "+=" + window.innerWidth,
-          scrub: !0
-        },
-        x: '-10%',
-        scale: 1,
-        ease: "none"
-      })
-    })),
-    _n.to(".people", {
+    })), _n.to(".people", {
       scrollTrigger: {
         trigger: ".people",
         end: "+=" + (document.querySelector(".people").offsetWidth - window.innerWidth),
@@ -3574,161 +3796,14 @@ document.querySelectorAll(".lien span").forEach((function (t) {
       },
       x: -document.querySelector(".people").offsetWidth + window.innerWidth + "px",
       ease: "none"
-    })
-
-    );
-    // gsap.registerPlugin(ScrollTrigger);
-    if(window.innerWidth >= 1281){
-    _n.to(".truth2 .mot", {
-      scrollTrigger: {
-        trigger: ".truth2 .repere",
-        start: "top 80%",
-        end: "+=" + 2 * Bo + "px",
-        pin: ".pin-intraction-box",
-        scrub: !0,
-      },
-      scale: 8.55,
-      x: "-380%",
-      marginRight: '0',
-      y: "200%",
-      ease: "none"
-    })
-  }
-  // else if (window.innerWidth >= 992 ){
-  //   _n.to(".truth2 .mot", {
-  //     scrollTrigger: {
-  //       trigger: ".truth2 .repere",
-  //       start: "top 80%",
-  //       end: "+=" + 2 * Bo + "px",
-  //       pin: ".pin-intraction-box",
-  //       scrub: !0,
-  //     },
-  //     scale: 5.55,
-  //     x: "-220%",
-  //     marginRight: '0',
-  //     y: "70%",
-  //     ease: "none"
-  //   })
-  // }
-  // else if (window.innerWidth >= 768 ){
-  //   _n.to(".truth2 .mot", {
-  //     scrollTrigger: {
-  //       trigger: ".truth2 .repere",
-  //       start: "top 80%",
-  //       end: "+=" + 2 * Bo + "px",
-  //       pin: ".pin-intraction-box",
-  //       scrub: !0,
-  //     },
-  //     scale: 3.8,
-  //     x: "-120%",
-  //     marginRight: '0',
-  //     y: "0%",
-  //     ease: "none"
-  //   })
-  // }
-  else{
-    _n.to(".truth2 .mot", {
-      scrollTrigger: {
-        trigger: ".truth2 .repere",
-        start: "top 80%",
-        end: "+=" + 2 * Bo + "px",
-        pin: ".pin-intraction-box",
-        scrub: !0,
-      },
-      scale: 3.8,
-      x: "-0%",
-      marginRight: '0',
-      y: "0%",
-      ease: "none"
-    })
-  }
-  ;
-   document.querySelectorAll(".truth2 span").forEach((function (t) {
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".bottom-block-text-wrapper",
-          start: "top 80%",
-          end: "top top",
-          scrub: !0
-        },
-        y: Math.floor(100 * Math.random()) + 0 + "%",
-        ease: "none"
-      })
-    }));
-    var t = [];
-    document.querySelectorAll(".mot1 span").forEach((function (e) {
-      return t.push(e)
-    })), t.reverse();
-    var e = [];
-    document.querySelectorAll(".mot2 span").forEach((function (t) {
-      return e.push(t)
-    })), e.reverse();
-    var r = 0;
-    t.forEach((function (t) {
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".bottom-block-text-wrapper",
-          start: "top -50%",
-          end: "top -" + 1.2 * window.innerHeight + "-=" + r,
-          scrub: !0,
-        },
-        y: "-250%",
-        ease: "none"
-      }), r += .48 * window.innerHeight
-    }));
-    var n = 0;
-    e.forEach((function (t) {
-      _n.to(t, {
-        scrollTrigger: {
-          trigger: ".bottom-block-text-wrapper",
-          start: "top -50%",
-          end: "top -" + 1.2 * window.innerHeight + "-=" + n,
-          scrub: !0
-        },
-        y: "-250%",
-        ease: "none"
-      }), n += .48 * window.innerHeight
-    })),
-    _n.fromTo(".intro", {
-      x: .375 * window.innerWidth + "px",
-      y: -.35 * Bo + "px"
-    }, {
-      scrollTrigger: {
-        id: "finaltest",
-        trigger: ".bottom-block-text-wrapper",
-        start: "top 0%",
-        end: "+=" + 4.5 * window.innerHeight + "px",
-        scrub: !0,
-        onLeave: function () {
-          document.querySelector(".nom").classList.add("visible")
-        },
-        onEnterBack: function () {
-          document.querySelector(".nom").classList.remove("visible")
-        }
-      },
-      scale: 1,
-      x: "0px",
-      y: "0px",
-      ease: "none"
-    }), _n.to(".intro img", {
-      scrollTrigger: {
-        trigger: ".bottom-block-text-wrapper",
-        start: "top 0%",
-        end: "+=" + 4.5 * window.innerHeight + "px",
-        scrub: !0
-      },
-      scale: 1
-    });
+    }))
   }
 
   function jo(t, e, r) {
     if (!Do) {
       document.getElementById("volet").style.display = "block", Do = !0;
-      document.getElementById("bodyMain").classList.remove("active-nav"), Do = !0;
       var n = 0;
-      // ".SDeb" == t && document.querySelector(".nom").classList.remove("visible");
-      Do = !0, document.getElementById("bodyMain").classList.remove("active-nav")
-
+      ".SDeb" == t && document.querySelector(".nom").classList.remove("visible");
       var i = document.querySelector(t).getBoundingClientRect().top > 0 ? 1 : -1;
       ".SProfessor" == t && 1 == i && (e = 2 * Bo + 1), !0 !== r ? _n.fromTo("#volet", {
         y: 100 * i + "%"
@@ -3738,7 +3813,6 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         ease: "power4.inOut",
         onComplete: function () {
           Do = !1, document.getElementById("volet").style.display = "none"
-          Do = !0, document.getElementById("bodyMain").classList.remove("active-nav")
         }
       }) : (n = 300, _n.to("#volet", {
         y: 100 * -i + "%",
@@ -3746,7 +3820,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
         ease: "power4.inOut",
         delay: 1,
         onComplete: function () {
-          Do = !1,  document.getElementById("volet").style.display = "none"
+          Do = !1, document.querySelector(".notesB").style.display = "none", document.getElementById("volet").style.display = "none"
         }
       })), _n.delayedCall(1, (function () {
         document.getElementById("menu").style.display = "none", ".SDeb" != t && document.querySelector(".nom").classList.add("visible");
@@ -3758,120 +3832,199 @@ document.querySelectorAll(".lien span").forEach((function (t) {
     }
   }
   window.addEventListener("DOMContentLoaded", (function () {
-    if (No.load(No, Yo, Vo, Uo), Yo.load(No, Yo, Vo, Uo), Vo.load(No, Yo, Vo, Uo), Uo.load(No, Yo, Vo, Uo), qo() && window.scrollTo(0, 0),
-     document.addEventListener("click", (function (t) {
-        if (Wo || (Wo = !0, new Lo({
-            withAudio: !0
-          })), t.target.closest(".play1")) _n.to(".innerVideo .inner", {
-          duration: .5,
-          ease: "power2.inOut",
-          x: "-100%"
-        }), _n.to(".innerVideo .innerBtn, .innerVideo .inner img", {
-          duration: .5,
-          ease: "power2.inOut",
-          x: "100%"
-        }), document.getElementById("vid1").play();
-        else if (t.target.closest(".play2")) _n.to(".innerPlayer .inner", {
-          duration: .5,
-          ease: "power2.inOut",
-          x: "-100%"
-        }), _n.to(".innerPlayer .innerBtn, .innerPlayer .inner img", {
-          duration: .5,
-          ease: "power2.inOut",
-          x: "100%"
-        }), document.getElementById("vid2").play();
-        else if (t.target.closest(".img") && 0 == Do) {
-          Do = !0, Po.unwheel();
-          var e = t.target.closest(".img"),
-            r = e.getAttribute("data-img") - 1;
-          document.getElementById("carousel").querySelectorAll(".bigPic > div")[r].classList.add("current"), _n.set(".bigPic .current", {
-            x: "0%"
-          }), _n.set(".bigPic .current img", {
-            x: "0%"
-          }), document.getElementById("carousel").querySelectorAll(".titresC > h3")[r].classList.add("current"), document.getElementById("carousel").querySelectorAll(".artist > div")[r].classList.add("current"), document.querySelectorAll(".img, .amazing, .innerFl").forEach((function (t) {
-            t != e && _n.to(t, {
-              opacity: 0,
-              duration: .2
-            })
-          })), _n.to(".innerInverse", {
+    if (No.load(No, Yo, Vo, Uo), Yo.load(No, Yo, Vo, Uo), Vo.load(No, Yo, Vo, Uo), Uo.load(No, Yo, Vo, Uo), qo() && window.scrollTo(0, 0), document.getElementById("annee").addEventListener("change", (function (t) {
+      document.querySelector(".toAnnee").innerHTML = t.target.value, _n.to(".pastE.affiche", {
+        opacity: 0,
+        duration: .2,
+        stagger: .06,
+        onComplete: function () {
+          document.querySelectorAll(".pastE").forEach((function (t) {
+            t.style.display = "none"
+          })), document.querySelectorAll('.pastE[data-annee="' + document.getElementById("annee").value + '"]').forEach((function (t) {
+            t.style.display = "block", t.classList.add("affiche")
+          })), Oo.getAll().forEach((function (t) {
+            t.kill()
+          })), Xo(), alert("cas: annee"), Po.resize(), _n.to('.pastE[data-annee="' + document.getElementById("annee").value + '"]', {
+            opacity: 1,
+            duration: .2,
+            stagger: .1
+          })
+        }
+      })
+    })), document.addEventListener("click", (function (t) {
+      if (Wo || (Wo = !0, new Lo({
+        withAudio: !0
+      })), t.target.closest(".play1")) _n.to(".innerVideo .inner", {
+        duration: .5,
+        ease: "power2.inOut",
+        x: "-100%"
+      }), _n.to(".innerVideo .innerBtn, .innerVideo .inner img", {
+        duration: .5,
+        ease: "power2.inOut",
+        x: "100%"
+      }), document.getElementById("vid1").play();
+      else if (t.target.closest(".play2")) _n.to(".innerPlayer .inner", {
+        duration: .5,
+        ease: "power2.inOut",
+        x: "-100%"
+      }), _n.to(".innerPlayer .innerBtn, .innerPlayer .inner img", {
+        duration: .5,
+        ease: "power2.inOut",
+        x: "100%"
+      }), document.getElementById("vid2").play();
+      else if (t.target.closest(".img") && 0 == Do) {
+        Do = !0, Po.unwheel();
+        var e = t.target.closest(".img"),
+          r = e.getAttribute("data-img") - 1;
+        document.getElementById("carousel").querySelectorAll(".bigPic > div")[r].classList.add("current"), _n.set(".bigPic .current", {
+          x: "0%"
+        }), _n.set(".bigPic .current img", {
+          x: "0%"
+        }), document.getElementById("carousel").querySelectorAll(".titresC > h3")[r].classList.add("current"), document.getElementById("carousel").querySelectorAll(".artist > div")[r].classList.add("current"), document.querySelectorAll(".img, .amazing, .innerFl").forEach((function (t) {
+          t != e && _n.to(t, {
             opacity: 0,
             duration: .2
-          }), e.classList.add("devant"), document.querySelector(".nom").classList.remove("visible"), _n.killTweensOf(e), _n.killTweensOf(e.querySelector(".transi")), _n.to(e, {
-            y: "-50%",
-            x: .25 * window.innerWidth + "px",
-            duration: 1,
-            ease: "power4.inOut",
-            onComplete: function () {
-              document.getElementById("carousel").style.display = "flex", _n.to("#carousel", {
-                opacity: 1,
-                duration: .2,
-                onComplete: function () {
-                  _n.set(e, {
-                    opacity: 0
-                  })
-                }
-              }), Do = !1
-            }
-          }), _n.to(e.querySelector(".transi"), {
-            scale: 1,
-            duration: 1,
-            ease: "power4.inOut",
-            onComplete: function () {
-              _n.killTweensOf(e)
-            }
           })
-        } else if (t.target.closest(".close")) {
-          var n = window.scrollY;
-          Oo.getAll().forEach((function (t) {
-            t.kill()
-          })), Xo(), qo() ? window.scrollTo(0, n) : Po.wheel(), _n.to("#carousel", {
-            opacity: 0,
-            duration: .4,
-            onComplete: function () {
-              document.getElementById("carousel").style.display = "none", document.getElementById("carousel").querySelectorAll("*").forEach((function (t) {
-                t.removeAttribute("style", "")
-              })), document.querySelector(".bigPic .current").classList.remove("current"), document.querySelector(".titresC .current").classList.remove("current"), document.querySelector(".artist .current").classList.remove("current"), document.querySelectorAll(".img, .amazing, .innerFl").forEach((function (t) {
-                _n.to(t, {
-                  opacity: 1,
-                  duration: .2
+        })), _n.to(".innerInverse", {
+          opacity: 0,
+          duration: .2
+        }), e.classList.add("devant"), document.querySelector(".nom").classList.remove("visible"), _n.killTweensOf(e), _n.killTweensOf(e.querySelector(".transi")), _n.to(e, {
+          y: "-50%",
+          x: .25 * window.innerWidth + "px",
+          duration: 1,
+          ease: "power4.inOut",
+          onComplete: function () {
+            document.getElementById("carousel").style.display = "flex", _n.to("#carousel", {
+              opacity: 1,
+              duration: .2,
+              onComplete: function () {
+                _n.set(e, {
+                  opacity: 0
                 })
-              })), _n.to(".innerInverse", {
+              }
+            }), Do = !1
+          }
+        }), _n.to(e.querySelector(".transi"), {
+          scale: 1,
+          duration: 1,
+          ease: "power4.inOut",
+          onComplete: function () {
+            _n.killTweensOf(e)
+          }
+        })
+      } else if (t.target.closest(".close")) {
+        var n = window.scrollY;
+        Oo.getAll().forEach((function (t) {
+          t.kill()
+        })), Xo(), qo() ? window.scrollTo(0, n) : Po.wheel(), _n.to("#carousel", {
+          opacity: 0,
+          duration: .4,
+          onComplete: function () {
+            document.getElementById("carousel").style.display = "none", document.getElementById("carousel").querySelectorAll("*").forEach((function (t) {
+              t.removeAttribute("style", "")
+            })), document.querySelector(".bigPic .current").classList.remove("current"), document.querySelector(".titresC .current").classList.remove("current"), document.querySelector(".artist .current").classList.remove("current"), document.querySelectorAll(".img, .amazing, .innerFl").forEach((function (t) {
+              _n.to(t, {
                 opacity: 1,
                 duration: .2
               })
-            }
-          }), document.querySelector(".img.devant").classList.remove("devant"), document.querySelector(".nom").classList.add("visible")
-        } else if (t.target.closest(".toNext")) Do || (Do = !0, u = document.querySelector(".carouI.current"), l = document.querySelector(".nomOrgue.current"), c = null !== document.querySelector(".carouI.current").nextElementSibling ? document.querySelector(".carouI.current").nextElementSibling : document.querySelectorAll(".carouI")[0], d = null !== document.querySelector(".nomOrgue.current").nextElementSibling ? document.querySelector(".nomOrgue.current").nextElementSibling : document.querySelectorAll(".nomOrgue")[0], p = document.querySelector(".artist .current"), f = null !== document.querySelector(".artist .current").nextElementSibling ? document.querySelector(".artist .current").nextElementSibling : document.querySelectorAll(".artist div")[0], _n.to(u, {
+            })), _n.to(".innerInverse", {
+              opacity: 1,
+              duration: .2
+            })
+          }
+        }), document.querySelector(".img.devant").classList.remove("devant"), document.querySelector(".nom").classList.add("visible")
+      } else if (t.target.closest(".toNext")) Do || (Do = !0, u = document.querySelector(".carouI.current"), l = document.querySelector(".nomOrgue.current"), c = null !== document.querySelector(".carouI.current").nextElementSibling ? document.querySelector(".carouI.current").nextElementSibling : document.querySelectorAll(".carouI")[0], d = null !== document.querySelector(".nomOrgue.current").nextElementSibling ? document.querySelector(".nomOrgue.current").nextElementSibling : document.querySelectorAll(".nomOrgue")[0], p = document.querySelector(".artist .current"), f = null !== document.querySelector(".artist .current").nextElementSibling ? document.querySelector(".artist .current").nextElementSibling : document.querySelectorAll(".artist div")[0], _n.to(u, {
+        duration: .5,
+        x: "-100%",
+        ease: "power2.inOut"
+      }), _n.to(u.querySelector("img"), {
+        duration: .5,
+        x: "98%",
+        ease: "power2.inOut"
+      }), _n.fromTo(c, {
+        x: "100%"
+      }, {
+        duration: .5,
+        x: "0%",
+        ease: "power2.inOut"
+      }), _n.fromTo(c.querySelector("img"), {
+        x: "-98%"
+      }, {
+        duration: .5,
+        x: "0%",
+        ease: "power2.inOut",
+        onComplete: function () {
+          u.classList.remove("current"), c.classList.add("current")
+        }
+      }), _n.to(l.querySelectorAll("span"), {
+        stagger: .05,
+        x: -.03 * window.innerWidth + "px",
+        opacity: 0,
+        duration: .3,
+        ease: "power2.in"
+      }), _n.fromTo(d.querySelectorAll("span"), {
+        x: .03 * window.innerWidth + "px"
+      }, {
+        stagger: -.05,
+        x: 0,
+        opacity: 1,
+        delay: .5,
+        duration: .3,
+        ease: "power2.out",
+        onComplete: function () {
+          l.classList.remove("current"), d.classList.add("current"), Do = !1
+        }
+      }), _n.to(p, {
+        opacity: 0,
+        duration: .3,
+        onComplete: function () {
+          p.classList.remove("current"), f.classList.add("current")
+        }
+      }), _n.fromTo(f, {
+        opacity: 0
+      }, {
+        opacity: 1,
+        duration: .3,
+        delay: .7
+      }));
+      else if (t.target.closest(".toPrev")) Do || (Do = !0, function () {
+        var t = document.querySelector(".carouI.current"),
+          e = document.querySelector(".nomOrgue.current"),
+          r = null !== document.querySelector(".carouI.current").previousElementSibling ? document.querySelector(".carouI.current").previousElementSibling : document.querySelectorAll(".carouI")[document.querySelectorAll(".carouI").length - 1],
+          n = null !== document.querySelector(".nomOrgue.current").previousElementSibling ? document.querySelector(".nomOrgue.current").previousElementSibling : document.querySelectorAll(".nomOrgue")[document.querySelectorAll(".nomOrgue").length - 1],
+          i = document.querySelector(".artist .current"),
+          o = null !== document.querySelector(".artist .current").previousElementSibling ? document.querySelector(".artist .current").previousElementSibling : document.querySelectorAll(".artist div")[document.querySelectorAll(".artist div").length - 1];
+        _n.to(t, {
           duration: .5,
-          x: "-100%",
+          x: "100%",
           ease: "power2.inOut"
-        }), _n.to(u.querySelector("img"), {
+        }), _n.to(t.querySelector("img"), {
           duration: .5,
-          x: "98%",
+          x: "-98%",
           ease: "power2.inOut"
-        }), _n.fromTo(c, {
-          x: "100%"
+        }), _n.fromTo(r, {
+          x: "-100%"
         }, {
           duration: .5,
           x: "0%",
           ease: "power2.inOut"
-        }), _n.fromTo(c.querySelector("img"), {
-          x: "-98%"
+        }), _n.fromTo(r.querySelector("img"), {
+          x: "98%"
         }, {
           duration: .5,
           x: "0%",
           ease: "power2.inOut",
           onComplete: function () {
-            u.classList.remove("current"), c.classList.add("current")
+            t.classList.remove("current"), r.classList.add("current")
           }
-        }), _n.to(l.querySelectorAll("span"), {
+        }), _n.to(e.querySelectorAll("span"), {
           stagger: .05,
-          x: -.03 * window.innerWidth + "px",
+          x: .03 * window.innerWidth + "px",
           opacity: 0,
           duration: .3,
           ease: "power2.in"
-        }), _n.fromTo(d.querySelectorAll("span"), {
-          x: .03 * window.innerWidth + "px"
+        }), _n.fromTo(n.querySelectorAll("span"), {
+          x: -.03 * window.innerWidth + "px"
         }, {
           stagger: -.05,
           x: 0,
@@ -3880,210 +4033,141 @@ document.querySelectorAll(".lien span").forEach((function (t) {
           duration: .3,
           ease: "power2.out",
           onComplete: function () {
-            l.classList.remove("current"), d.classList.add("current"), Do = !1
+            e.classList.remove("current"), n.classList.add("current"), Do = !1
           }
-        }), _n.to(p, {
+        }), _n.to(i, {
           opacity: 0,
           duration: .3,
           onComplete: function () {
-            p.classList.remove("current"), f.classList.add("current")
+            i.classList.remove("current"), o.classList.add("current")
           }
-        }), _n.fromTo(f, {
+        }), _n.fromTo(o, {
           opacity: 0
         }, {
           opacity: 1,
           duration: .3,
           delay: .7
-        }));
-        else if (t.target.closest(".toPrev")) Do || (Do = !0, function () {
-          var t = document.querySelector(".carouI.current"),
-            e = document.querySelector(".nomOrgue.current"),
-            r = null !== document.querySelector(".carouI.current").previousElementSibling ? document.querySelector(".carouI.current").previousElementSibling : document.querySelectorAll(".carouI")[document.querySelectorAll(".carouI").length - 1],
-            n = null !== document.querySelector(".nomOrgue.current").previousElementSibling ? document.querySelector(".nomOrgue.current").previousElementSibling : document.querySelectorAll(".nomOrgue")[document.querySelectorAll(".nomOrgue").length - 1],
-            i = document.querySelector(".artist .current"),
-            o = null !== document.querySelector(".artist .current").previousElementSibling ? document.querySelector(".artist .current").previousElementSibling : document.querySelectorAll(".artist div")[document.querySelectorAll(".artist div").length - 1];
-          _n.to(t, {
-            duration: .5,
-            x: "100%",
-            ease: "power2.inOut"
-          }), _n.to(t.querySelector("img"), {
-            duration: .5,
-            x: "-98%",
-            ease: "power2.inOut"
-          }), _n.fromTo(r, {
-            x: "-100%"
-          }, {
-            duration: .5,
-            x: "0%",
-            ease: "power2.inOut"
-          }), _n.fromTo(r.querySelector("img"), {
-            x: "98%"
-          }, {
-            duration: .5,
-            x: "0%",
-            ease: "power2.inOut",
-            onComplete: function () {
-              t.classList.remove("current"), r.classList.add("current")
-            }
-          }), _n.to(e.querySelectorAll("span"), {
-            stagger: .05,
-            x: .03 * window.innerWidth + "px",
-            opacity: 0,
-            duration: .3,
-            ease: "power2.in"
-          }), _n.fromTo(n.querySelectorAll("span"), {
-            x: -.03 * window.innerWidth + "px"
-          }, {
-            stagger: -.05,
-            x: 0,
-            opacity: 1,
-            delay: .5,
-            duration: .3,
-            ease: "power2.out",
-            onComplete: function () {
-              e.classList.remove("current"), n.classList.add("current"), Do = !1
-            }
-          }), _n.to(i, {
-            opacity: 0,
-            duration: .3,
-            onComplete: function () {
-              i.classList.remove("current"), o.classList.add("current")
-            }
-          }), _n.fromTo(o, {
-            opacity: 0
-          }, {
-            opacity: 1,
-            duration: .3,
-            delay: .7
-          })
-        }());
-        else if (t.target.closest(".toMenu") && !Do) {
-          Do = !0, document.getElementById("bodyMain").classList.add("active-nav"),
-          Do = !0, document.getElementById("volet").style.display = "block",
-           _n.fromTo("#volet", {
-            y: "-100%"
-          }, {
-            y: "100%",
-            duration: 2,
-            ease: "power4.inOut",
-            onComplete: function () {
-              Do = !1, document.getElementById("volet").style.display = "none"
-            }
-          }), _n.delayedCall(1, (function () {
-            document.getElementById("menu").style.display = "flex", _n.fromTo("hr", {
-              opacity: 0
-            }, {
-              opacity: 1,
-              ease: "power2.inOut",
-              stagger: .06,
-              duration: 1
-            })
-          })), _n.delayedCall(.7, (function () {
-            _n.fromTo(".entree .nom", {
-              y: "-80%"
-            }, {
-              y: "0%",
-              ease: "power4.out",
-              stagger: .06,
-              duration: 1.8
-            }), _n.fromTo(".entree .part", {
-              y: "-100%",
-              x: "-100%",
-              opacity: 0
-            }, {
-              y: "0%",
-              opacity: 1,
-              ease: "power4.out",
-              stagger: .06,
-              duration: 2.5
-            })
-          })), document.querySelectorAll(".entree button").forEach((function (t) {
-            t.classList.remove("passe")
-          }));
-          var i = 0;
-          document.querySelectorAll(".passage").forEach((function (t) {
-            t.getBoundingClientRect().top < window.innerHeight && i++
-          }));
-          for (var o = 0; o <= i; o++) document.querySelectorAll(".entree button")[o].classList.add("passe")
-        } else if (t.target.closest(".toClose") && !Do)
-         Do = !0,
-          document.getElementById("volet").style.display = "block",
-         document.getElementById("bodyMain").classList.remove("active-nav"),
-
-
-          _n.fromTo("#volet", {
-          y: "100%"
+        })
+      }());
+      else if (t.target.closest(".toMenu") && !Do) {
+        Do = !0, document.getElementById("volet").style.display = "block", _n.fromTo("#volet", {
+          y: "-100%"
         }, {
-          y: "-100%",
+          y: "100%",
           duration: 2,
           ease: "power4.inOut",
           onComplete: function () {
             Do = !1, document.getElementById("volet").style.display = "none"
           }
         }), _n.delayedCall(1, (function () {
-          document.getElementById("menu").style.display = "none"
-        })), _n.to(".entree .nom", {
-          y: "-80%",
-          ease: "power4.in",
-          stagger: -.06,
-          duration: 1
-        });
-        else if (t.target.closest(".toSection")) {
-          var s = t.target.closest(".toSection").getAttribute("data-ancre"),
-            a = 0;
-          ".SAuthor" == s && (a = window.innerWidth), ".STitular" == s && (_n.killTweensOf(".STitular .texte div, .amazing div, .innerSvg, .innerSvg img"), _n.set(".amazing div, .innerSvg", {
-            y: "100%"
-          }), _n.set(".innerSvg img", {
-            y: "-100%",
+          document.getElementById("menu").style.display = "flex", _n.fromTo("hr", {
             opacity: 0
-          }), _n.set(".STitular .texte div", {
-            y: "0%"
-          })), jo(s, a, !1)
-        } else if (t.target.closest(".nomL")) {
-          jo(".SDeb", 0, !1), document.querySelector(".nom").classList.remove("visible")
-        } else t.target.closest(".toSon1") ? t.target.closest(".toSon1").classList.contains("actif") ? (t.target.closest(".toSon1").classList.remove("actif"), No.mute()) : (t.target.closest(".toSon1").classList.add("actif"), No.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon2") ? t.target.closest(".toSon2").classList.contains("actif") ? (t.target.closest(".toSon2").classList.remove("actif"), Yo.mute()) : (t.target.closest(".toSon2").classList.add("actif"), Yo.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon3") ? t.target.closest(".toSon3").classList.contains("actif") ? (t.target.closest(".toSon3").classList.remove("actif"), Vo.mute()) : (t.target.closest(".toSon3").classList.add("actif"), Vo.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon4") && (t.target.closest(".toSon4").classList.contains("actif") ? (t.target.closest(".toSon4").classList.remove("actif"), Uo.mute()) : (t.target.closest(".toSon4").classList.add("actif"), Uo.play(No, Yo, Vo, Uo)));
-        var u, l, c, d, p, f
-      })), qo() || (Oo.scrollerProxy(Ro, {
-        scrollTop: function (t) {
-          return arguments.length && (Po.current = -t), -Po.current
-        },
-        getBoundingClientRect: function () {
-          return {
-            top: 0,
-            left: 0,
-            width: window.innerWidth,
-            height: window.innerHeight
-          }
+          }, {
+            opacity: 1,
+            ease: "power2.inOut",
+            stagger: .06,
+            duration: 1
+          })
+        })), _n.delayedCall(.7, (function () {
+          _n.fromTo(".entree .nom", {
+            y: "-80%"
+          }, {
+            y: "0%",
+            ease: "power4.out",
+            stagger: .06,
+            duration: 1.8
+          }), _n.fromTo(".entree .part", {
+            y: "-100%",
+            x: "-100%",
+            opacity: 0
+          }, {
+            y: "0%",
+            opacity: 1,
+            ease: "power4.out",
+            stagger: .06,
+            duration: 2.5
+          })
+        })), document.querySelectorAll(".entree button").forEach((function (t) {
+          t.classList.remove("passe")
+        }));
+        var i = 0;
+        document.querySelectorAll(".passage").forEach((function (t) {
+          t.getBoundingClientRect().top < window.innerHeight && i++
+        }));
+        for (var o = 0; o <= i; o++) document.querySelectorAll(".entree button")[o].classList.add("passe")
+      } else if (t.target.closest(".toClose") && !Do) Do = !0, document.getElementById("volet").style.display = "block", _n.fromTo("#volet", {
+        y: "100%"
+      }, {
+        y: "-100%",
+        duration: 2,
+        ease: "power4.inOut",
+        onComplete: function () {
+          Do = !1, document.getElementById("volet").style.display = "none"
         }
-      }), Po.init()), setTimeout((function () {
-        document.body.classList.remove("load"), _n.to(".scroll", {
-          opacity: 1,
-          ease: "power2.out",
-          duration: 1,
-          delay: 3
-        }), jo(".SDeb", 0, !0), qo() ? (window.scrollTo(0, 0), function () {
-          if (window.innerWidth > window.innerHeight) {
-            Oo.getAll().forEach((function (t) {
-              t.kill()
-            })), Xo()
-          }
-        }()) : (_n.fromTo(".nota", {
-          y: "-150%",
+      }), _n.delayedCall(1, (function () {
+        document.getElementById("menu").style.display = "none"
+      })), _n.to(".entree .nom", {
+        y: "-80%",
+        ease: "power4.in",
+        stagger: -.06,
+        duration: 1
+      });
+      else if (t.target.closest(".toSection")) {
+        var s = t.target.closest(".toSection").getAttribute("data-ancre"),
+          a = 0;
+        ".SAuthor" == s && (a = window.innerWidth), ".STitular" == s && (_n.killTweensOf(".STitular .texte div, .amazing div, .innerSvg, .innerSvg img"), _n.set(".amazing div, .innerSvg", {
+          y: "100%"
+        }), _n.set(".innerSvg img", {
+          y: "-100%",
           opacity: 0
-        }, {
-          y: "0%",
-          opacity: 1,
-          stagger: .1,
-          duration: 1.1,
-          delay: .5,
-          ease: "elastic.out"
-        }), _n.to(".notesB", {
-          y: "-30%",
-          duration: 1.6,
-          delay: 1,
-          ease: "power4.inOut"
-        }), Xo(), Po.wheel(), Po.resize())
-      }), 1e3), qo()) {
+        }), _n.set(".STitular .texte div", {
+          y: "0%"
+        })), jo(s, a, !1)
+      } else if (t.target.closest(".nomL")) {
+        jo(".SDeb", 0, !1), document.querySelector(".nom").classList.remove("visible")
+      } else t.target.closest(".toSon1") ? t.target.closest(".toSon1").classList.contains("actif") ? (t.target.closest(".toSon1").classList.remove("actif"), No.mute()) : (t.target.closest(".toSon1").classList.add("actif"), No.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon2") ? t.target.closest(".toSon2").classList.contains("actif") ? (t.target.closest(".toSon2").classList.remove("actif"), Yo.mute()) : (t.target.closest(".toSon2").classList.add("actif"), Yo.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon3") ? t.target.closest(".toSon3").classList.contains("actif") ? (t.target.closest(".toSon3").classList.remove("actif"), Vo.mute()) : (t.target.closest(".toSon3").classList.add("actif"), Vo.play(No, Yo, Vo, Uo)) : t.target.closest(".toSon4") && (t.target.closest(".toSon4").classList.contains("actif") ? (t.target.closest(".toSon4").classList.remove("actif"), Uo.mute()) : (t.target.closest(".toSon4").classList.add("actif"), Uo.play(No, Yo, Vo, Uo)));
+      var u, l, c, d, p, f
+    })), qo() || (Oo.scrollerProxy(Ro, {
+      scrollTop: function (t) {
+        return arguments.length && (Po.current = -t), -Po.current
+      },
+      getBoundingClientRect: function () {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight
+        }
+      }
+    }), Po.init()), setTimeout((function () {
+      document.body.classList.remove("load"), _n.to(".scroll", {
+        opacity: 1,
+        ease: "power2.out",
+        duration: 1,
+        delay: 3
+      }), jo(".SDeb", 0, !0), qo() ? (window.scrollTo(0, 0), function () {
+        if (window.innerWidth > window.innerHeight) {
+          Oo.getAll().forEach((function (t) {
+            t.kill()
+          })), Xo()
+        }
+      }()) : (_n.fromTo(".nota", {
+        y: "-150%",
+        opacity: 0
+      }, {
+        y: "0%",
+        opacity: 1,
+        stagger: .1,
+        duration: 1.1,
+        delay: .5,
+        ease: "elastic.out"
+      }), _n.to(".notesB", {
+        y: "-30%",
+        duration: 1.6,
+        delay: 1,
+        ease: "power4.inOut"
+      }), Xo(), Po.wheel(), Po.resize())
+    }), 1e3), qo()) {
       window.addEventListener("scroll", (function (t) {
         window.innerHeight > Bo && (Bo = window.innerHeight, Oo.getAll().forEach((function (t) {
           t.kill()
