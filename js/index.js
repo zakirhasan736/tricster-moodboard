@@ -262,11 +262,12 @@ if (window.innerWidth <= 991){
     
 $(document).ready(function() {
     $('.elf-navigation-bar').on('click', function(){
-        document.querySelector('.elf-navigation-wrapper').style.display = "block";
-        $('.elf-navigation-wrapper').addClass('info-open');
+        // document.querySelector('.elf-navigation-wrapper').style.display = "block";
+        $('.elf-navigation-wrapper').addClass('info-openUP');
       })
       $('.elf-trigger-close').on('click', function(){
-        document.querySelector('.elf-navigation-wrapper').style.display = "none";
+        // document.querySelector('.elf-navigation-wrapper').style.display = "none";
+        $('.elf-navigation-wrapper').removeClass('info-openUP');
       })
   });
   

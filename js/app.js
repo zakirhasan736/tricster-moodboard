@@ -3749,7 +3749,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
           Do = !1,  document.getElementById("volet").style.display = "none"
         }
       })), _n.delayedCall(1, (function () {
-        document.getElementById("menu").style.display = "none", ".SDeb" != t && document.querySelector(".nom").classList.add("visible");
+        document.getElementById("menu").classList.remove('info-openUP'), ".SDeb" != t && document.querySelector(".nom").classList.add("visible");
         var r = 0;
         r = qo() ? -window.scrollY : Po.current;
         var o = document.querySelector(t).getBoundingClientRect().top - r + e;
@@ -3970,7 +3970,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
               Do = !1, document.getElementById("volet").style.display = "none"
             }
           }), _n.delayedCall(1, (function () {
-            document.getElementById("menu").style.display = "flex", _n.fromTo("hr", {
+            document.getElementById("menu").classList.add('info-openUP'), _n.fromTo("hr", {
               opacity: 0
             }, {
               opacity: 1,
@@ -4021,7 +4021,7 @@ document.querySelectorAll(".lien span").forEach((function (t) {
             Do = !1, document.getElementById("volet").style.display = "none"
           }
         }), _n.delayedCall(1, (function () {
-          document.getElementById("menu").style.display = "none"
+          document.getElementById("menu").classList.remove('info-openUP')
         })), _n.to(".entree .nom", {
           y: "-80%",
           ease: "power4.in",

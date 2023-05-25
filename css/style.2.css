@@ -1,13 +1,13 @@
 
 /* menu */
-.active-nav {
+/* .active-nav {
 	overflow: hidden !important;
 }
 body.active-nav #garciScroll{
 	transform: none !important;
   overflow: hidden !important;
   overflow-y: scroll!important;
-}
+} */
 #menu .core-header {
 	z-index: 999;
 }
@@ -895,7 +895,7 @@ header .nom.visible {
 }
 #menu {
   position: fixed;
-  display: none;
+  display: block;
   top: 0;
   left: 0;
   width: 100%;
@@ -903,7 +903,16 @@ header .nom.visible {
   background: #181818;
   z-index: 3;
   z-index: 999999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   color: #fff;
+  transition: all 350ms ease-in 0s;
+}
+.elf-navigation-wrapper.info-openUP {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: painted !important;
 }
 #menu ol {
   width: var(--col-10);

@@ -1837,13 +1837,15 @@ figure figcaption {
   }
   .pin-intraction-box .truth2 .mot img {
     width: 100%;
-    transform: scale(1.7) translateX(-24%) !important;
     margin-left: auto;
     margin-right: auto;
-  }
-  .truth2 {
-    margin-bottom: 10vh;
-  }
+    max-width: 442px;
+    height: 662px;
+}
+.truth2 {
+  margin-bottom: 0;
+}
+
 .mobo-bottom-footer-text-cont {
   text-align: center;
   padding: 99px 15px 116px;
@@ -1860,9 +1862,10 @@ figure figcaption {
   font-weight: 500;
   line-height: 1.2;
 }
+.truth2 .mot {
+  -webkit-transform: translateX(-15px) translateY(-0%);
+  transform: translateX(0px) translateY(-0%);
+  margin-right: 0;
+  margin-bottom: 0;
 }
-@media screen  and (max-width:475px) and (min-width:395px){
-  .pin-intraction-box .truth2 .mot img {
-    transform: scale(1.7) translateX(-28.5%) !important;
-  }
 }
