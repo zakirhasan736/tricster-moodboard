@@ -766,7 +766,14 @@ h1 {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
+@media screen and (min-width:992px) {
+  h1 span {
+    font: 500 normal 19.5vw/0.95 'HelveticaNowDisplay';
+    letter-spacing: -0.77vw;
+    display: inline-block;
+    padding: 0 0 3vw;
+  }
+}
 h1 .mot1 {
   margin: 3vw 0 -3vw;
 }
@@ -3605,7 +3612,7 @@ video::-webkit-media-controls{
   padding-bottom: 0;
   height: 596px;
 }
-/* .bottom-block-text-wrapper .fixI h1 span {
+.bottom-block-text-wrapper .fixI h1 span {
   font-size: 10vw;
   letter-spacing: unset;
   line-height: 1;
@@ -3613,7 +3620,7 @@ video::-webkit-media-controls{
 font-style: normal;
 font-weight: 400;
 font-size: 160px;
-} */
+}
 .inverter-slider-item .text-iteration {
   margin-left: calc(334px - 5%);
   position: relative;
